@@ -613,41 +613,7 @@ let btn = [{
                         } else if (setbot.templateLocation) {
                         xavior.send5ButLoc(m.chat, anu, 'Rel°Bot-MD', global.thumb, btn)
                         }
-                     }
-            break
-            case 'Infoowner': {
-                anu = `*[INFO OWNER]*
-                
-                *OWNER 1*            
-                Nama: Farel
-                Umur: ----
-                Askot: Sulawesi tengah
-                Gender: Cowok
-                
-                *OWNER 2*
-                Nama: Naufal
-                Umur: ---
-                Askot: Riau
-                Gender: cowok`
-let btn = [{
-                                urlButton: {
-                                    displayText: 'OWNER',
-                                    url: 'OWNER'
-                                }
-                            }]
-                         let setbot = db.data.settings[botNumber]
-                        if (setbot.templateImage) {
-                        xavior.send5ButImg(m.chat, anu, 'Rel°Bot-MD', global.thumb, btn, global.thumb)
-                        } else if (setbot.templateGif) {
-                        xavior.send5ButGif(m.chat, anu, 'Rel°Bot-MD', global.visoka, btn, global.thumb)
-                        } else if (setbot.templateVid) {
-                        xavior.send5ButVid(m.chat, anu, 'Rel°Bot-MD', global.visoka, btn, global.thumb)
-                        } else if (setbot.templateMsg) {
-                        xavior.send5ButMsg(m.chat, anu, 'Rel°Bot-MD', btn)
-                        } else if (setbot.templateLocation) {
-                        xavior.send5ButLoc(m.chat, anu, 'Rel°Bot-MD', global.thumb, btn)
-                        }
-                     }
+                     }           
                      break
             case 'chat': {
                 if (!isCreator) throw mess.owner
