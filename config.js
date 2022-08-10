@@ -12,30 +12,30 @@ global.APIKeys = {
 }
 
 // Other
-global.namabot = ['AzzBot-MD']
-global.namaowner = ['YahyaGanzz']
-global.owner = ['6281511480762']
-global.premium = ['6281511480762']
-global.packname = 'AzzBot-MD'
-global.author = 'WhatsApp•Bot'
+global.namabot = ['Rel°Bot-MD']
+global.namaowner = ['Farel']
+global.owner = ['6282290452317','6283156687953']
+global.premium = ['6282290452317','6283156687953']
+global.packname = 'Rel°Bot-MD'
+global.author = 'By Farel/naufal'
 global.sessionName = 'Xavior'
 global.prefa = ['','!','.','🐦','🐤','🗿']
-global.sp = '⭔'
+global.sp = '៚'
 global.mess = {
-    success: 'DoaMu Terkabulkan',
+    success: 'Berhasil✓',
     admin: 'Fitur Khusus Admin Group!',
     botAdmin: 'Jadikan Bot Admin Terlebih Dahulu!',
     owner: 'Khusus Owner Bot',
-    group: 'Itu Khusus Grup Bre...!',
-    private: 'Cuma Bisa Chat Pribadi Bre...',
+    group: 'pengunaan di dalam group',
+    private: 'pengunaan di pc',
     bot: 'Khusus Nomor Bot',
-    wait: 'Tunggu Sejam...',
-    endLimit: 'Limit Harian Sudah Habis, Limit Akan Direset Besok',
+    wait: 'Tolong beri waktu!!, Bot sedang memproses..',
+    endLimit: 'Limit anda habis!!, limit akan di riset setiap harinya!',
 }
 //Kalo Ngasih Limit Jangan Dikit Lah Bng
 global.limitawal = {
     premium: "Infinity",
-    free: 100
+    free: 20
 }
 global.thumb = fs.readFileSync('./lib/xavi.jpg')
 global.visoka = { url: 'https://telegra.ph/file/15209657f9d4f59c7ca1e.mp4' }
