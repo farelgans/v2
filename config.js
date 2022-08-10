@@ -14,8 +14,8 @@ global.APIKeys = {
 // Other
 global.namabot = ['Rel°Bot-MD']
 global.namaowner = ['Farel']
-global.owner = ['6282290452317','6283156687953']
-global.premium = ['6282290452317','6283156687953']
+global.owner = ['6282290452317']
+global.premium = ['6282290452317']
 global.packname = 'Rel°Bot-MD'
 global.author = 'By Farel/naufal'
 global.sessionName = 'Xavior'
