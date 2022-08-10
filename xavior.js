@@ -45,7 +45,7 @@ const sewa = JSON.parse(fs.readFileSync('./database/sewa.json'));
 const time = moment.tz('Asia/Jakarta').format('HH:mm:ss')
 // TANGGAL
 var buln = ['/01/', '/02/', '/03/', '/04/', '/05/', '/06/', '/07/', '/08/', '/09/', '/10/', '/11/', '/12/'];
-var myHari = ['Minggu', 'Senin', 'Selasa', 'Rabu', 'Kamis', 'Jumat', 'Sabtu'];
+var myHari = ['Ahad', 'Senin', 'Selasa', 'Rabu', 'Kamis', 'Jumat', 'Sabtu'];
 var tgel = new Date();
 var hri = tgel.getDate();
 var bulnh = tgel.getMonth();
@@ -189,7 +189,7 @@ _sewa.expiredCheck(xavior, sewa)
 	    let setting = global.db.data.settings[botNumber]
 	    if (new Date() * 1 - setting.status > 1000) {
 		let uptime = await runtime(process.uptime())
-		await xavior.setStatus(`${'AzzBot-MD'} | Runtime : ${runtime(uptime)}`)
+		await xavior.setStatus(`${'Rel°Bot-MD'} | Runtime : ${runtime(uptime)}`)
 		setting.status = new Date() * 1
 	    }
 	}
@@ -260,7 +260,7 @@ ${Array.from(room.jawaban, (jawaban, index) => {
             kuis = true
             jawaban = tebaklagu[m.sender.split('@')[0]]
             if (budy.toLowerCase() == jawaban) {
-                await xavior.sendButtonText(m.chat, [{ buttonId: 'tebak lagu', buttonText: { displayText: 'Tebak Lagu' }, type: 1 }], `🎮 Tebak Lagu 🎮\n\nJawaban Benar🎉\n\nKukira Cupu Ternyata Suhu😎\n\nIngin bermain lagi? tekan button dibawah`, 'AzzBot-MD', m)
+                await xavior.sendButtonText(m.chat, [{ buttonId: 'tebak lagu', buttonText: { displayText: 'Tebak Lagu' }, type: 1 }], `🎮 Tebak Lagu 🎮\n\nJawaban Benar🎉\n\nKukira Cupu Ternyata Suhu😎\n\nIngin bermain lagi? tekan button dibawah`, 'Rel°Bot-MD', m)
                 delete tebaklagu[m.sender.split('@')[0]]
             } else m.reply('*😏 Jawaban Lu Salah Bng!*')
         }
@@ -278,7 +278,7 @@ ${Array.from(room.jawaban, (jawaban, index) => {
             kuis = true
             jawaban = tebakgambar[m.sender.split('@')[0]]
             if (budy.toLowerCase() == jawaban) {
-                await xavior.sendButtonText(m.chat, [{ buttonId: 'tebak gambar', buttonText: { displayText: 'Tebak Gambar' }, type: 1 }], `🎮 Tebak Gambar 🎮\n\nJawaban Benar🎉\n\nKukira Cupu Ternyata Suhu😎\n\nIngin bermain lagi? tekan button dibawah`, 'AzzBot-MD', m)
+                await xavior.sendButtonText(m.chat, [{ buttonId: 'tebak gambar', buttonText: { displayText: 'Tebak Gambar' }, type: 1 }], `🎮 Tebak Gambar 🎮\n\nJawaban Benar🎉\n\nKukira Cupu Ternyata Suhu😎\n\nIngin bermain lagi? tekan button dibawah`, 'Rel°Bot-MD', m)
                 delete tebakgambar[m.sender.split('@')[0]]
             } else m.reply('*😏 Jawaban Lu Salah Bng!*')
         }
@@ -287,7 +287,7 @@ ${Array.from(room.jawaban, (jawaban, index) => {
             kuis = true
             jawaban = tebakkata[m.sender.split('@')[0]]
             if (budy.toLowerCase() == jawaban) {
-                await xavior.sendButtonText(m.chat, [{ buttonId: 'tebak kata', buttonText: { displayText: 'Tebak Kata' }, type: 1 }], `🎮 Tebak Kata 🎮\n\nJawaban Benar🎉\n\nKukira Cupu Ternyata Suhu😎\n\nIngin bermain lagi? tekan button dibawah`, 'AzzBot-MD', m)
+                await xavior.sendButtonText(m.chat, [{ buttonId: 'tebak kata', buttonText: { displayText: 'Tebak Kata' }, type: 1 }], `🎮 Tebak Kata 🎮\n\nJawaban Benar🎉\n\nKukira Cupu Ternyata Suhu😎\n\nIngin bermain lagi? tekan button dibawah`, 'Rel°Bot-MD', m)
                 delete tebakkata[m.sender.split('@')[0]]
             } else m.reply('*😏 Jawaban Lu Salah Bng!*')
         }
@@ -297,7 +297,7 @@ ${Array.from(room.jawaban, (jawaban, index) => {
             jawaban = caklontong[m.sender.split('@')[0]]
 	    deskripsi = caklontong_desk[m.sender.split('@')[0]]
             if (budy.toLowerCase() == jawaban) {
-                await xavior.sendButtonText(m.chat, [{ buttonId: 'tebak lontong', buttonText: { displayText: 'Tebak Lontong' }, type: 1 }], `🎮 Cak Lontong 🎮\n\nJawaban Benar🎉\n\nKukira Cupu Ternyata Suhu😎\n*${deskripsi}*\n\nIngin bermain lagi? tekan button dibawah`, 'AzzBot-MD', m)
+                await xavior.sendButtonText(m.chat, [{ buttonId: 'tebak lontong', buttonText: { displayText: 'Tebak Lontong' }, type: 1 }], `🎮 Cak Lontong 🎮\n\nJawaban Benar🎉\n\nKukira Cupu Ternyata Suhu😎\n*${deskripsi}*\n\nIngin bermain lagi? tekan button dibawah`, 'Rel°Bot-MD', m)
                 delete caklontong[m.sender.split('@')[0]]
 		delete caklontong_desk[m.sender.split('@')[0]]
             } else m.reply('*😏 Jawaban Lu Salah Bng!*')
@@ -307,7 +307,7 @@ ${Array.from(room.jawaban, (jawaban, index) => {
             kuis = true
             jawaban = tebakkalimat[m.sender.split('@')[0]]
             if (budy.toLowerCase() == jawaban) {
-                await xavior.sendButtonText(m.chat, [{ buttonId: 'tebak kalimat', buttonText: { displayText: 'Tebak Kalimat' }, type: 1 }], `🎮 Tebak Kalimat 🎮\n\nJawaban Benar🎉\n\nKukira Cupu Ternyata Suhu😎\n\nIngin bermain lagi? tekan button dibawah`, 'AzzBot-MD', m)
+                await xavior.sendButtonText(m.chat, [{ buttonId: 'tebak kalimat', buttonText: { displayText: 'Tebak Kalimat' }, type: 1 }], `🎮 Tebak Kalimat 🎮\n\nJawaban Benar🎉\n\nKukira Cupu Ternyata Suhu😎\n\nIngin bermain lagi? tekan button dibawah`, 'Rel°Bot-MD', m)
                 delete tebakkalimat[m.sender.split('@')[0]]
             } else m.reply('*😏 Jawaban Lu Salah Bng!*')
         }
@@ -316,7 +316,7 @@ ${Array.from(room.jawaban, (jawaban, index) => {
             kuis = true
             jawaban = tebaklirik[m.sender.split('@')[0]]
             if (budy.toLowerCase() == jawaban) {
-                await xavior.sendButtonText(m.chat, [{ buttonId: 'tebak lirik', buttonText: { displayText: 'Tebak Lirik' }, type: 1 }], `🎮 Tebak Lirik 🎮\n\nJawaban Benar🎉\n\nKukira Cupu Ternyata Suhu😎\n\nIngin bermain lagi? tekan button dibawah`, 'AzzBot-MD', m)
+                await xavior.sendButtonText(m.chat, [{ buttonId: 'tebak lirik', buttonText: { displayText: 'Tebak Lirik' }, type: 1 }], `🎮 Tebak Lirik 🎮\n\nJawaban Benar🎉\n\nKukira Cupu Ternyata Suhu😎\n\nIngin bermain lagi? tekan button dibawah`, 'Rel°Bot-MD', m)
                 delete tebaklirik[m.sender.split('@')[0]]
             } else m.reply('*😏 Jawaban Lu Salah Bng!*')
         }
@@ -325,7 +325,7 @@ ${Array.from(room.jawaban, (jawaban, index) => {
             kuis = true
             jawaban = tebaktebakan[m.sender.split('@')[0]]
             if (budy.toLowerCase() == jawaban) {
-                await xavior.sendButtonText(m.chat, [{ buttonId: 'tebak tebakan', buttonText: { displayText: 'Tebak Tebakan' }, type: 1 }], `🎮 Tebak Tebakan 🎮\n\nJawaban Benar🎉\n\nKukira Cupu Ternyata Suhu😎\n\nIngin bermain lagi? tekan button dibawah`, 'AzzBot-MD', m)
+                await xavior.sendButtonText(m.chat, [{ buttonId: 'tebak tebakan', buttonText: { displayText: 'Tebak Tebakan' }, type: 1 }], `🎮 Tebak Tebakan 🎮\n\nJawaban Benar🎉\n\nKukira Cupu Ternyata Suhu😎\n\nIngin bermain lagi? tekan button dibawah`, 'Rel°Bot-MD', m)
                 delete tebaktebakan[m.sender.split('@')[0]]
             } else m.reply('*😏 Jawaban Lu Salah Bng!*')
         }
@@ -594,31 +594,61 @@ Silahkan @${m.mentionedJid[0].split`@`[0]} untuk ketik terima/tolak`
             break
 	    
             case 'sc': {
-                anu = `*Kalian Bisa Cek Yt XaviorOfc:*
-https://youtube.com/channel/UCmUhiytK9WMYaOFgdOho_2g
-
-*Recode By : Xavior88*
-https://github.com/Xavior88`
+                anu = `*CHAT OWNER AJA*`
 let btn = [{
                                 urlButton: {
-                                    displayText: 'Source Code',
-                                    url: 'https://github.com/Xavior88'
+                                    displayText: 'OWNER',
+                                    url: 'OWNER'
                                 }
                             }]
                          let setbot = db.data.settings[botNumber]
                         if (setbot.templateImage) {
-                        xavior.send5ButImg(m.chat, anu, 'AzzBot-MD', global.thumb, btn, global.thumb)
+                        xavior.send5ButImg(m.chat, anu, 'Rel°Bot-MD', global.thumb, btn, global.thumb)
                         } else if (setbot.templateGif) {
-                        xavior.send5ButGif(m.chat, anu, 'AzzBot-MD', global.visoka, btn, global.thumb)
+                        xavior.send5ButGif(m.chat, anu, 'Rel°Bot-MD', global.visoka, btn, global.thumb)
                         } else if (setbot.templateVid) {
-                        xavior.send5ButVid(m.chat, anu, 'AzzBot-MD', global.visoka, btn, global.thumb)
+                        xavior.send5ButVid(m.chat, anu, 'Rel°Bot-MD', global.visoka, btn, global.thumb)
                         } else if (setbot.templateMsg) {
-                        xavior.send5ButMsg(m.chat, anu, 'AzzBot-MD', btn)
+                        xavior.send5ButMsg(m.chat, anu, 'Rel°Bot-MD', btn)
                         } else if (setbot.templateLocation) {
-                        xavior.send5ButLoc(m.chat, anu, 'AzzBot-MD', global.thumb, btn)
+                        xavior.send5ButLoc(m.chat, anu, 'Rel°Bot-MD', global.thumb, btn)
                         }
                      }
             break
+            case 'Infoowner': {
+                anu = `*[INFO OWNER]*
+                
+                *OWNER 1*            
+                Nama: Farel
+                Umur: ----
+                Askot: Sulawesi tengah
+                Gender: Cowok
+                
+                *OWNER 2*
+                Nama: Naufal
+                Umur: ---
+                Askot: Riau
+                Gender: cowok`
+let btn = [{
+                                urlButton: {
+                                    displayText: 'OWNER',
+                                    url: 'OWNER'
+                                }
+                            }]
+                         let setbot = db.data.settings[botNumber]
+                        if (setbot.templateImage) {
+                        xavior.send5ButImg(m.chat, anu, 'Rel°Bot-MD', global.thumb, btn, global.thumb)
+                        } else if (setbot.templateGif) {
+                        xavior.send5ButGif(m.chat, anu, 'Rel°Bot-MD', global.visoka, btn, global.thumb)
+                        } else if (setbot.templateVid) {
+                        xavior.send5ButVid(m.chat, anu, 'Rel°Bot-MD', global.visoka, btn, global.thumb)
+                        } else if (setbot.templateMsg) {
+                        xavior.send5ButMsg(m.chat, anu, 'Rel°Bot-MD', btn)
+                        } else if (setbot.templateLocation) {
+                        xavior.send5ButLoc(m.chat, anu, 'Rel°Bot-MD', global.thumb, btn)
+                        }
+                     }
+                     break
             case 'chat': {
                 if (!isCreator) throw mess.owner
                 if (!q) throw 'Option : 1. mute\n2. unmute\n3. archive\n4. unarchive\n5. read\n6. unread\n7. delete'
@@ -675,7 +705,7 @@ let btn = [{
                     await sleep(60000)
                     if (tebaklagu.hasOwnProperty(m.sender.split('@')[0])) {
                     console.log("Jawaban: " + result.jawaban)
-                    xavior.sendButtonText(m.chat, [{ buttonId: 'tebak lagu', buttonText: { displayText: 'Tebak Lagu' }, type: 1 }], `Waktu Habis\nJawaban:  ${tebaklagu[m.sender.split('@')[0]]}\n\nIngin bermain? tekan button dibawah`, 'AzzBot-MD', m)
+                    xavior.sendButtonText(m.chat, [{ buttonId: 'tebak lagu', buttonText: { displayText: 'Tebak Lagu' }, type: 1 }], `Waktu Habis\nJawaban:  ${tebaklagu[m.sender.split('@')[0]]}\n\nIngin bermain? tekan button dibawah`, 'Rel°Bot-MD', m)
                     delete tebaklagu[m.sender.split('@')[0]]
                     }
                 } else if (args[0] === 'gambar') {
@@ -688,7 +718,7 @@ let btn = [{
                     await sleep(60000)
                     if (tebakgambar.hasOwnProperty(m.sender.split('@')[0])) {
                     console.log("Jawaban: " + result.jawaban)
-                    xavior.sendButtonText(m.chat, [{ buttonId: 'tebak gambar', buttonText: { displayText: 'Tebak Gambar' }, type: 1 }], `Waktu Habis\nJawaban:  ${tebakgambar[m.sender.split('@')[0]]}\n\nIngin bermain? tekan button dibawah`, 'AzzBot-MD', m)
+                    xavior.sendButtonText(m.chat, [{ buttonId: 'tebak gambar', buttonText: { displayText: 'Tebak Gambar' }, type: 1 }], `Waktu Habis\nJawaban:  ${tebakgambar[m.sender.split('@')[0]]}\n\nIngin bermain? tekan button dibawah`, 'Rel°Bot-MD', m)
                     delete tebakgambar[m.sender.split('@')[0]]
                     }
                 } else if (args[0] === 'kata') {
@@ -701,7 +731,7 @@ let btn = [{
                     await sleep(60000)
                     if (tebakkata.hasOwnProperty(m.sender.split('@')[0])) {
                     console.log("Jawaban: " + result.jawaban)
-                    xavior.sendButtonText(m.chat, [{ buttonId: 'tebak kata', buttonText: { displayText: 'Tebak Kata' }, type: 1 }], `Waktu Habis\nJawaban:  ${tebakkata[m.sender.split('@')[0]]}\n\nIngin bermain? tekan button dibawah`, 'AzzBot-MD', m)
+                    xavior.sendButtonText(m.chat, [{ buttonId: 'tebak kata', buttonText: { displayText: 'Tebak Kata' }, type: 1 }], `Waktu Habis\nJawaban:  ${tebakkata[m.sender.split('@')[0]]}\n\nIngin bermain? tekan button dibawah`, 'Rel°Bot-MD', m)
                     delete tebakkata[m.sender.split('@')[0]]
                     }
                 } else if (args[0] === 'kalimat') {
@@ -714,7 +744,7 @@ let btn = [{
                     await sleep(60000)
                     if (tebakkalimat.hasOwnProperty(m.sender.split('@')[0])) {
                     console.log("Jawaban: " + result.jawaban)
-                    xavior.sendButtonText(m.chat, [{ buttonId: 'tebak kalimat', buttonText: { displayText: 'Tebak Kalimat' }, type: 1 }], `Waktu Habis\nJawaban:  ${tebakkalimat[m.sender.split('@')[0]]}\n\nIngin bermain? tekan button dibawah`, 'AzzBot-MD', m)
+                    xavior.sendButtonText(m.chat, [{ buttonId: 'tebak kalimat', buttonText: { displayText: 'Tebak Kalimat' }, type: 1 }], `Waktu Habis\nJawaban:  ${tebakkalimat[m.sender.split('@')[0]]}\n\nIngin bermain? tekan button dibawah`, 'Rel°Bot-MD', m)
                     delete tebakkalimat[m.sender.split('@')[0]]
                     }
                 } else if (args[0] === 'lirik') {
@@ -727,7 +757,7 @@ let btn = [{
                     await sleep(60000)
                     if (tebaklirik.hasOwnProperty(m.sender.split('@')[0])) {
                     console.log("Jawaban: " + result.jawaban)
-                    xavior.sendButtonText(m.chat, [{ buttonId: 'tebak lirik', buttonText: { displayText: 'Tebak Lirik' }, type: 1 }], `Waktu Habis\nJawaban:  ${tebaklirik[m.sender.split('@')[0]]}\n\nIngin bermain? tekan button dibawah`, 'AzzBot-MD', m)
+                    xavior.sendButtonText(m.chat, [{ buttonId: 'tebak lirik', buttonText: { displayText: 'Tebak Lirik' }, type: 1 }], `Waktu Habis\nJawaban:  ${tebaklirik[m.sender.split('@')[0]]}\n\nIngin bermain? tekan button dibawah`, 'Rel°Bot-MD', m)
                     delete tebaklirik[m.sender.split('@')[0]]
                     }
                 } else if (args[0] === 'lontong') {
@@ -741,7 +771,7 @@ let btn = [{
                     await sleep(60000)
                     if (caklontong.hasOwnProperty(m.sender.split('@')[0])) {
                     console.log("Jawaban: " + result.jawaban)
-                    xavior.sendButtonText(m.chat, [{ buttonId: 'tebak lontong', buttonText: { displayText: 'Tebak Lontong' }, type: 1 }], `Waktu Habis\nJawaban:  ${caklontong[m.sender.split('@')[0]]}\nDeskripsi : ${caklontong_desk[m.sender.split('@')[0]]}\n\nIngin bermain? tekan button dibawah`, 'AzzBot-MD', m)
+                    xavior.sendButtonText(m.chat, [{ buttonId: 'tebak lontong', buttonText: { displayText: 'Tebak Lontong' }, type: 1 }], `Waktu Habis\nJawaban:  ${caklontong[m.sender.split('@')[0]]}\nDeskripsi : ${caklontong_desk[m.sender.split('@')[0]]}\n\nIngin bermain? tekan button dibawah`, 'Rel°Bot-MD', m)
                     delete caklontong[m.sender.split('@')[0]]
 		    delete caklontong_desk[m.sender.split('@')[0]]
                     }
@@ -776,7 +806,7 @@ let btn = [{
             let buttons = [
                         { buttonId: 'jodohku', buttonText: { displayText: 'Jodohku' }, type: 1 }
                     ]
-                    await xavior.sendButtonText(m.chat, buttons, jawab, 'AzzBot-MD', m, {mentions: ments})
+                    await xavior.sendButtonText(m.chat, buttons, jawab, 'Rel°Bot-MD', m, {mentions: ments})
             }
             break
             case 'jadian': {
@@ -791,7 +821,7 @@ let btn = [{
             let buttons = [
                         { buttonId: 'jadian', buttonText: { displayText: 'Jodohku' }, type: 1 }
                     ]
-                    await xavior.sendButtonText(m.chat, buttons, jawab, 'AzzBot-MD', m, {mentions: menst})
+                    await xavior.sendButtonText(m.chat, buttons, jawab, 'Rel°Bot-MD', m, {mentions: menst})
             }
             break
             case 'react': {
@@ -984,7 +1014,7 @@ let buttonsVote = [
 
             let buttonMessageVote = {
                 text: teks_vote,
-                footer: 'AzzBot-MD',
+                footer: 'Rel°Bot-MD',
                 buttons: buttonsVote,
                 headerType: 1
             }
@@ -1025,7 +1055,7 @@ ${vote[m.chat][2].map((v, i) => `├ ${i + 1}. @${v.split`@`[0]}`).join('\n')}
 
             let buttonMessageUpvote = {
                 text: teks_vote,
-                footer: 'AzzBot-MD',
+                footer: 'Rel°Bot-MD',
                 buttons: buttonsUpvote,
                 headerType: 1,
                 mentions: menvote
@@ -1067,7 +1097,7 @@ ${vote[m.chat][2].map((v, i) => `├ ${i + 1}. @${v.split`@`[0]}`).join('\n')}
 
             let buttonMessageDevote = {
                 text: teks_vote,
-                footer: 'AzzBot-MD',
+                footer: 'Rel°Bot-MD',
                 buttons: buttonsDevote,
                 headerType: 1,
                 mentions: menvote
@@ -1124,7 +1154,7 @@ break
                         { buttonId: 'group open', buttonText: { displayText: 'Open' }, type: 1 },
                         { buttonId: 'group close', buttonText: { displayText: 'Close' }, type: 1 }
                     ]
-                    await xavior.sendButtonText(m.chat, buttons, `Mode Group`, 'AzzBot-MD', m)
+                    await xavior.sendButtonText(m.chat, buttons, `Mode Group`, 'Rel°Bot-MD', m)
 
              }
             }
@@ -1142,7 +1172,7 @@ break
                         { buttonId: 'editinfo open', buttonText: { displayText: 'Open' }, type: 1 },
                         { buttonId: 'editinfo close', buttonText: { displayText: 'Close' }, type: 1 }
                     ]
-                    await xavior.sendButtonText(m.chat, buttons, `Mode Edit Info`, 'AzzBot-MD', m)
+                    await xavior.sendButtonText(m.chat, buttons, `Mode Edit Info`, 'Rel°Bot-MD', m)
 
             }
             }
@@ -1164,7 +1194,7 @@ break
                         { buttonId: 'antilink on', buttonText: { displayText: 'On' }, type: 1 },
                         { buttonId: 'antilink off', buttonText: { displayText: 'Off' }, type: 1 }
                     ]
-                    await xavior.sendButtonText(m.chat, buttons, `Mode Antilink`, 'AzzBot-MD', m)
+                    await xavior.sendButtonText(m.chat, buttons, `Mode Antilink`, 'Rel°Bot-MD', m)
                 }
              }
              break
@@ -1175,17 +1205,17 @@ break
                 if (args[0] === "on") {
                 if (db.data.chats[m.chat].mute) return m.reply(`Sudah Aktif Sebelumnya`)
                 db.data.chats[m.chat].mute = true
-                m.reply(`${'AzzBot-MD'} telah di mute di group ini !`)
+                m.reply(`${'Rel°Bot-MD'} telah di mute di group ini !`)
                 } else if (args[0] === "off") {
                 if (!db.data.chats[m.chat].mute) return m.reply(`Sudah Tidak Aktif Sebelumnya`)
                 db.data.chats[m.chat].mute = false
-                m.reply(`${'AzzBot-MD'} telah di unmute di group ini !`)
+                m.reply(`${'Rel°Bot-MD'} telah di unmute di group ini !`)
                 } else {
                  let buttons = [
                         { buttonId: 'mute on', buttonText: { displayText: 'On' }, type: 1 },
                         { buttonId: 'mute off', buttonText: { displayText: 'Off' }, type: 1 }
                     ]
-                    await xavior.sendButtonText(m.chat, buttons, `Mute Bot`, 'AzzBot-MD', m)
+                    await xavior.sendButtonText(m.chat, buttons, `Mute Bot`, 'Rel°Bot-MD', m)
                 }
              }
              break
@@ -1220,7 +1250,7 @@ break
                 ]
                 },
                 ]
-                xavior.sendListMsg(m.chat, `Please select the following Ephemeral Options List !`, 'AzzBot-MD', `Hello Admin ${groupMetadata.subject}`, `Click Here`, sections, m)
+                xavior.sendListMsg(m.chat, `Please select the following Ephemeral Options List !`, 'Rel°Bot-MD', `Hello Admin ${groupMetadata.subject}`, `Click Here`, sections, m)
                 }
             }
             break
@@ -1242,13 +1272,13 @@ break
                     await sleep(1500)
                     let btn = [{
                                 urlButton: {
-                                    displayText: 'My Youtube️',
-                                    url: 'https://youtube.com/channel/UCmUhiytK9WMYaOFgdOho_2g'
+                                    displayText: 'Facebook owner 1️',
+                                    url: 'hhttps://www.facebook.com/frel.frel.908132'
                                 }
                                 }, {
                                 urlButton: {
-                                    displayText: 'Website Bot',
-                                    url: 'https://github.com/AzzBott679'
+                                    displayText: 'Facebook owner 2',
+                                    url: 'https://www.facebook.com/muhammadnaufal.mushaddiq'
                                 }
                                 }, {
                                 quickReplyButton: {
@@ -1267,7 +1297,7 @@ break
                                 }
                             }]
                       let txt = `「 Broadcast Bot 」\n\n${text}`
-                      xavior.send5ButImg(i, txt, 'AzzBot-MD', global.thumb, btn)
+                      xavior.send5ButImg(i, txt, 'Rel°Bot-MD', global.thumb, btn)
                     }
                 m.reply(`Sukses Mengirim Broadcast Ke ${anu.length} Group`)
             }
@@ -1281,13 +1311,13 @@ break
 		    await sleep(1500)
 		    let btn = [{
                                 urlButton: {
-                                    displayText: 'My Youtube️',
-                                    url: 'https://youtube.com/channel/UCmUhiytK9WMYaOFgdOho_2g'
+                                    displayText: 'Facebook owner 1️',
+                                    url: 'hhttps://www.facebook.com/frel.frel.908132'
                                 }
                                 }, {
                                 urlButton: {
-                                    displayText: 'Website Bot',
-                                    url: 'https://github.com/AzzBott679'
+                                    displayText: 'Facebook owner 2',
+                                    url: 'https://www.facebook.com/muhammadnaufal.mushaddiq'
                                 }
                                 }, {
                                 quickReplyButton: {
@@ -1306,7 +1336,7 @@ break
                                 }
                             }]
                       let txt = `「 Broadcast Bot 」\n\n${text}`
-                      xavior.send5ButImg(yoi, txt, 'AzzBot-MD', global.thumb, btn)
+                      xavior.send5ButImg(yoi, txt, 'Rel°Bot-MD', global.thumb, btn)
 		}
 		m.reply('Sukses Broadcast')
             }
@@ -1501,7 +1531,7 @@ break
             let media = await quoted.download()
             let { toAudio } = require('./lib/converter')
             let audio = await toAudio(media, 'mp4')
-            xavior.sendMessage(m.chat, {document: audio, mimetype: 'audio/mpeg', fileName: `Convert By ${'AzzBot-MD'}.mp3`}, { quoted : m })
+            xavior.sendMessage(m.chat, {document: audio, mimetype: 'audio/mpeg', fileName: `Convert By ${'Rel°Bot-MD'}.mp3`}, { quoted : m })
             }
             break
             case 'tovn': case 'toptt': {
@@ -1604,7 +1634,7 @@ break
                     caption: `*-------「 GIMAGE SEARCH 」-------*
 🤠 *Query* : ${text}
 🔗 *Media Url* : ${images}`,
-                    footer: 'AzzBot-MD',
+                    footer: 'Rel°Bot-MD',
                     buttons: buttons,
                     headerType: 4
                 }
@@ -1634,7 +1664,7 @@ break
 ⭔ Channel : ${anu.author.url}
 ⭔ Description : ${anu.description}
 ⭔ Url : ${anu.url}`,
-                    footer: 'AzzBot-MD',
+                    footer: 'Rel°Bot-MD',
                     buttons: buttons,
                     headerType: 4
                 }
@@ -1715,7 +1745,7 @@ break
                 let buttonMessage = {
                     image: { url: 'https://coffee.alexflipnote.dev/random' },
                     caption: `☕ Random Coffe`,
-                    footer: 'AzzBot-MD',
+                    footer: 'Rel°Bot-MD',
                     buttons: buttons,
                     headerType: 4
                 }
@@ -1733,7 +1763,7 @@ break
                 let buttonMessage = {
                     image: { url: result.image[0] },
                     caption: `⭔ Title : ${result.title}\n⭔ Category : ${result.type}\n⭔ Detail : ${result.source}\n⭔ Media Url : ${result.image[2] || result.image[1] || result.image[0]}`,
-                    footer: 'AzzBot-MD',
+                    footer: 'Rel°Bot-MD',
                     buttons: buttons,
                     headerType: 4
                 }
@@ -1751,7 +1781,7 @@ break
                 let buttonMessage = {
                     image: { url: result.image },
                     caption: `⭔ Title : ${result.title}\n⭔ Source : ${result.source}\n⭔ Media Url : ${result.image}`,
-                    footer: 'AzzBot-MD',
+                    footer: 'Rel°Bot-MD',
                     buttons: buttons,
                     headerType: 4
                 }
@@ -2271,7 +2301,7 @@ break
 ⭔ Url : ${anu.media[0]}
 Untuk Download Media Silahkan Klik salah satu Button dibawah ini atau masukkan command ytmp3/ytmp4 dengan url diatas
 `,
-			footer: 'AzzBot-MD',
+			footer: 'Rel°Bot-MD',
 			buttons,
 			headerType: 4
 		    }
@@ -2500,7 +2530,7 @@ Lihat list Pesan Dengan ${prefix}listmsg`)
 				let buttons = [
                     { buttonId: 'start', buttonText: { displayText: 'Start' }, type: 1 }
                 ]
-                xavior.sendButtonText(m.chat, buttons, `\`\`\`Hi ${await xavior.getName(m.sender)} Welcome To Anonymous Chat\n\nKlik Button Dibawah Ini Untuk Mencari Partner\`\`\``, 'AzzBot-MD', m)
+                xavior.sendButtonText(m.chat, buttons, `\`\`\`Hi ${await xavior.getName(m.sender)} Welcome To Anonymous Chat\n\nKlik Button Dibawah Ini Untuk Mencari Partner\`\`\``, 'Rel°Bot-MD', m)
             }
 			break
             case 'keluar': case 'leave': {
@@ -2527,7 +2557,7 @@ Lihat list Pesan Dengan ${prefix}listmsg`)
                     let buttons = [
                         { buttonId: 'keluar', buttonText: { displayText: 'Stop' }, type: 1 }
                     ]
-                    await xavior.sendButtonText(m.chat, buttons, `\`\`\`Kamu Masih Berada Di dalam Sesi Anonymous, Tekan Button Dibawah Ini Untuk Menghentikan Sesi Anonymous Anda\`\`\``, 'AzzBot-MD', m)
+                    await xavior.sendButtonText(m.chat, buttons, `\`\`\`Kamu Masih Berada Di dalam Sesi Anonymous, Tekan Button Dibawah Ini Untuk Menghentikan Sesi Anonymous Anda\`\`\``, 'Rel°Bot-MD', m)
                     throw false
                 }
                 let room = Object.values(this.anonymous).find(room => room.state === 'WAITING' && !room.check(m.sender))
@@ -2536,10 +2566,10 @@ Lihat list Pesan Dengan ${prefix}listmsg`)
                         { buttonId: 'next', buttonText: { displayText: 'Skip' }, type: 1 },
                         { buttonId: 'keluar', buttonText: { displayText: 'Stop' }, type: 1 }
                     ]
-                    await xavior.sendButtonText(room.a, buttons, `\`\`\`Berhasil Menemukan Partner, sekarang kamu dapat mengirim pesan\`\`\``, 'AzzBot-MD', m)
+                    await xavior.sendButtonText(room.a, buttons, `\`\`\`Berhasil Menemukan Partner, sekarang kamu dapat mengirim pesan\`\`\``, 'Rel°Bot-MD', m)
                     room.b = m.sender
                     room.state = 'CHATTING'
-                    await xavior.sendButtonText(room.b, buttons, `\`\`\`Berhasil Menemukan Partner, sekarang kamu dapat mengirim pesan\`\`\``, 'AzzBot-MD', m)
+                    await xavior.sendButtonText(room.b, buttons, `\`\`\`Berhasil Menemukan Partner, sekarang kamu dapat mengirim pesan\`\`\``, 'Rel°Bot-MD', m)
                 } else {
                     let id = + new Date
                     this.anonymous[id] = {
@@ -2557,7 +2587,7 @@ Lihat list Pesan Dengan ${prefix}listmsg`)
                     let buttons = [
                         { buttonId: 'keluar', buttonText: { displayText: 'Stop' }, type: 1 }
                     ]
-                    await xavior.sendButtonText(m.chat, buttons, `\`\`\`Mohon Tunggu Sedang Mencari Partner\`\`\``, 'AzzBot-MD', m)
+                    await xavior.sendButtonText(m.chat, buttons, `\`\`\`Mohon Tunggu Sedang Mencari Partner\`\`\``, 'Rel°Bot-MD', m)
                 }
                 break
             }
@@ -2581,10 +2611,10 @@ Lihat list Pesan Dengan ${prefix}listmsg`)
                         { buttonId: 'next', buttonText: { displayText: 'Skip' }, type: 1 },
                         { buttonId: 'keluar', buttonText: { displayText: 'Stop' }, type: 1 }
                     ]
-                    await xavior.sendButtonText(room.a, buttons, `\`\`\`Berhasil Menemukan Partner, sekarang kamu dapat mengirim pesan\`\`\``, 'AzzBot-MD', m)
+                    await xavior.sendButtonText(room.a, buttons, `\`\`\`Berhasil Menemukan Partner, sekarang kamu dapat mengirim pesan\`\`\``, 'Rel°Bot-MD', m)
                     room.b = m.sender
                     room.state = 'CHATTING'
-                    await xavior.sendButtonText(room.b, buttons, `\`\`\`Berhasil Menemukan Partner, sekarang kamu dapat mengirim pesan\`\`\``, 'AzzBot-MD', m)
+                    await xavior.sendButtonText(room.b, buttons, `\`\`\`Berhasil Menemukan Partner, sekarang kamu dapat mengirim pesan\`\`\``, 'Rel°Bot-MD', m)
                 } else {
                     let id = + new Date
                     this.anonymous[id] = {
@@ -2602,7 +2632,7 @@ Lihat list Pesan Dengan ${prefix}listmsg`)
                     let buttons = [
                         { buttonId: 'keluar', buttonText: { displayText: 'Stop' }, type: 1 }
                     ]
-                    await xavior.sendButtonText(m.chat, buttons, `\`\`\`Mohon Tunggu Sedang Mencari Partner\`\`\``, 'AzzBot-MD', m)
+                    await xavior.sendButtonText(m.chat, buttons, `\`\`\`Mohon Tunggu Sedang Mencari Partner\`\`\``, 'Rel°Bot-MD', m)
                 }
                 break
             }
@@ -2851,7 +2881,7 @@ let capt = `⭔ Title: ${judul}
                 ]
                 },
                 ]
-                xavior.sendListMsg(m.chat, `Please select the menu you want to change!`, 'AzzBot-MD', `Hello Owner !`, `Click Here`, sections, m)
+                xavior.sendListMsg(m.chat, `Please select the menu you want to change!`, 'Rel°Bot-MD', `Hello Owner !`, `Click Here`, sections, m)
                 }
             }
             break
@@ -2885,88 +2915,35 @@ let sewanya = `*「 SEWA EXPIRE 」*\n\n➸ *ID*: ${from}\n➸ *Expired :* ${cek
 m.reply(sewanya)
 break
 case 'sewabot':
-anu = `╭──「 *SEWABOT* 」
-├  1 BULAN : IDR 10.000 (10k)
-╰────
-╭─ [ KELEBIHAN BOT ]
-├  ＯＮ 24 ＪＡＭ
-├  FITUR BANYAK
-├  FAST RESPOND
-╰────
-╭─[ KEUNTUNGAN ]
-├  ANTI LINK ( AUTO KICK )
-├  WELCOME ( OTOMATIS )
-├  DAN RATUSAN FITUR LAINYA
-╰────
-╭─[ *MINAT CHAT* ]
-├  🪀 wa.me/6281511480762?text=SEWABOT
-╰────
-╭─[ *PAYMENT* ]
-├  DANA
-├  GOPAY
-╰────
-
-
-╭──「 *_JADI BOT + OWNER_* 」
-├   RP : IDR 20.000 (20k)
-╰────
-╭─ [ FASILITAS ]
-├  CUMA SCAN QR DOANG JADI BOT + OWNER                
-├  RUN DI HEROKU BUKAN TERMUX + FAST RESPOND
-├  FITUR BOT NYA BANYAK
-├  BUKAN BOT WIBUSOFT
-╰────
-╭─[ KEUNTUNGAN ]
-├  BISA OPEN SEWA BOT
-├  NAMA BOT, NAMA OWNER, OWNER, DLL DI GANTI JADI TERSERAH LU
-╰────
-╭─[ *MINAT CHAT* ]
-├  🪀 wa.me/6281511480762?text=JADIBOT
-╰────
-╭─[ *PAYMENT* ]
-├  DANA
-├  GOPAY
-├  PULSA
-╰────
-
-PERHATIAN:
--KALAU BOT YANG INI CUMA
-CONTOH FITUR/MENU NYA SAJA
-
--KECEPATAN RESPON DI BOT INI
-JUGA DELAY KARNA CUMA CONTOH SAJA
-
--KALAU BOT YANG KALIAN SEWA
-ATAU KALIAN JADI BOT
-RESPON BOTNYA LEBIH CEPAT
-KARNA RUN NYA BEDA SOFTWARE.`
+anu = `Bot belum di sewakan...
+Tapi anda dapat menambahkan bot ke group secara gratis!! chat owner aja`
 let btn = [{
                                 quickReplyButton: {
-                                    displayText: 'GOPAY',
-                                    id: 'gopay'
+                                    displayText: 'OWNER',
+                                    id: 'owner'
                                 }
                                 }, {
                                 quickReplyButton: {
-                                    displayText: 'DANA',
-                                    id: 'dana'
+                                    displayText: 'MENU',
+                                    id: 'meni'
                                 }
                             }, {
                                 quickReplyButton: {
-                                    displayText: 'PULSA',
-                                    id: 'pulsa'
+                                    displayText: 'DONASI',
+                                    id: 'donasi'
                                 }  
                             }]
                          let setbot = db.data.settings[botNumber]
                         if (setbot.templateImage) {
-                        xavior.send5ButImg(m.chat, anu, 'AzzBot-MD', global.thumb, btn, global.thumb)
+                        xavior.send5ButImg(m.chat, anu, 'Rel°Bot-MD', global.thumb, btn, global.thumb)
                         } else if (setbot.templateGif) {
-                        xavior.send5ButGif(m.chat, anu, 'AzzBot-MD', global.visoka, btn, global.thumb)
+                        xavior.send5ButGif(m.chat, anu, 'Rel°Bot-MD', global.visoka, btn, global.thumb)
                         } else if (setbot.templateVid) {
-                        xavior.send5ButVid(m.chat, anu, 'AzzBot-MD', global.visoka, btn, global.thumb)
+                        xavior.send5ButVid(m.chat, anu, 'Rel°Bot-MD', global.visoka, btn, global.thumb)
                         } else if (setbot.templateMsg) {
-                        xavior.send5ButMsg(m.chat, anu, 'AzzBot-MD', btn)
+                        xavior.send5ButMsg(m.chat, anu, 'Rel°Bot-MD', btn)
                         } else if (setbot.templateLocation) {
-                        xavior.send5ButLoc(m.chat, anu, 'AzzBot-MD', global.thumb, btn)
+                        xavior.send5ButLoc(m.chat, anu, 'Rel°Bot-MD', global.thumb, btn)
                         }
             break
 case 'gopay': {
@@ -3137,7 +3114,7 @@ anu = `${ucapanWaktu} ${pushname}
 ╭─❏ *『 INFO BOT 』*
 │ ➪ Prefix : ${prefix}
 │ ➪ Nama : ${global.namabot}
-│ ➪ Owner : ${global.namaowner}
+│ ➪ Owner : Farel & Naufal
 │ ➪ Mode : ${xavior.public ? 'Public' : 'Self'}
 │ ➪ Runtime : ${runtime(process.uptime())}
 │ ➪ Library : Baileys Multi Device
@@ -3379,6 +3356,7 @@ anu = `${ucapanWaktu} ${pushname}
 │➪ ${prefix}listgc
 │➪ ${prefix}listonline
 │➪ ${prefix}speedtest
+│➪ ${prefix}Infoowner
 ╰───────────────❏
 ╭─❏ *『 DATABASE MENU 』*
 │➪ ${prefix}setcmd
@@ -3418,13 +3396,13 @@ anu = `${ucapanWaktu} ${pushname}
 ╰───────────────❏`
 let btn = [{
                                 urlButton: {
-                                    displayText: 'My Youtube️',
-                                    url: 'https://youtube.com/channel/UCmUhiytK9WMYaOFgdOho_2g'
+                                    displayText: 'Facebook owner 1️',
+                                    url: 'hhttps://www.facebook.com/frel.frel.908132'
                                 }
                                 }, {
                                 urlButton: {
-                                    displayText: 'Website Bot',
-                                    url: 'https://github.com/AzzBott679'
+                                    displayText: 'Facebook owner 2',
+                                    url: 'https://www.facebook.com/muhammadnaufal.mushaddiq'
                                 }
                             }, {
                                 quickReplyButton: {
@@ -3444,15 +3422,15 @@ let btn = [{
                             }]
                          let setbot = db.data.settings[botNumber]
                         if (setbot.templateImage) {
-                        xavior.send5ButImg(m.chat, anu, 'AzzBot-MD', global.thumb, btn, global.thumb)
+                        xavior.send5ButImg(m.chat, anu, 'Rel°Bot-MD', global.thumb, btn, global.thumb)
                         } else if (setbot.templateGif) {
-                        xavior.send5ButGif(m.chat, anu, 'AzzBot-MD', global.visoka, btn, global.thumb)
+                        xavior.send5ButGif(m.chat, anu, 'Rel°Bot-MD', global.visoka, btn, global.thumb)
                         } else if (setbot.templateVid) {
-                        xavior.send5ButVid(m.chat, anu, 'AzzBot-MD', global.visoka, btn, global.thumb)
+                        xavior.send5ButVid(m.chat, anu, 'Rel°Bot-MD', global.visoka, btn, global.thumb)
                         } else if (setbot.templateMsg) {
-                        xavior.send5ButMsg(m.chat, anu, 'AzzBot-MD', btn)
+                        xavior.send5ButMsg(m.chat, anu, 'Rel°Bot-MD', btn)
                         } else if (setbot.templateLocation) {
-                        xavior.send5ButLoc(m.chat, anu, 'AzzBot-MD', global.thumb, btn)
+                        xavior.send5ButLoc(m.chat, anu, 'Rel°Bot-MD', global.thumb, btn)
                         }
                      }
             break
@@ -3465,7 +3443,7 @@ anu = `${ucapanWaktu} ${pushname}
 ╭─❏ *『 INFO BOT 』*
 │ ➪ Prefix : ${prefix}
 │ ➪ Nama : ${global.namabot}
-│ ➪ Owner : ${global.namaowner}
+│ ➪ Owner : Farel & Naufal
 │ ➪ Mode : ${xavior.public ? 'Public' : 'Self'}
 │ ➪ Runtime : ${runtime(process.uptime())}
 │ ➪ Library : Baileys Multi Device
@@ -3495,13 +3473,13 @@ anu = `${ucapanWaktu} ${pushname}
 ╰───────────────❏`
 let btn = [{
                                 urlButton: {
-                                    displayText: 'My Youtube️',
-                                    url: 'https://youtube.com/channel/UCmUhiytK9WMYaOFgdOho_2g'
+                                    displayText: 'Facebook owner 1️',
+                                    url: 'hhttps://www.facebook.com/frel.frel.908132'
                                 }
                                 }, {
                                 urlButton: {
-                                    displayText: 'Website Bot',
-                                    url: 'https://github.com/AzzBott679'
+                                    displayText: 'Facebook owner 2',
+                                    url: 'https://www.facebook.com/muhammadnaufal.mushaddiq'
                                 }
                             }, {
                                 quickReplyButton: {
@@ -3521,15 +3499,15 @@ let btn = [{
                             }]
                          let setbot = db.data.settings[botNumber]
                         if (setbot.templateImage) {
-                        xavior.send5ButImg(m.chat, anu, 'AzzBot-MD', global.thumb, btn, global.thumb)
+                        xavior.send5ButImg(m.chat, anu, 'Rel°Bot-MD', global.thumb, btn, global.thumb)
                         } else if (setbot.templateGif) {
-                        xavior.send5ButGif(m.chat, anu, 'AzzBot-MD', global.visoka, btn, global.thumb)
+                        xavior.send5ButGif(m.chat, anu, 'Rel°Bot-MD', global.visoka, btn, global.thumb)
                         } else if (setbot.templateVid) {
-                        xavior.send5ButVid(m.chat, anu, 'AzzBot-MD', global.visoka, btn, global.thumb)
+                        xavior.send5ButVid(m.chat, anu, 'Rel°Bot-MD', global.visoka, btn, global.thumb)
                         } else if (setbot.templateMsg) {
-                        xavior.send5ButMsg(m.chat, anu, 'AzzBot-MD', btn)
+                        xavior.send5ButMsg(m.chat, anu, 'Rel°Bot-MD', btn)
                         } else if (setbot.templateLocation) {
-                        xavior.send5ButLoc(m.chat, anu, 'AzzBot-MD', global.thumb, btn)
+                        xavior.send5ButLoc(m.chat, anu, 'Rel°Bot-MD', global.thumb, btn)
                         }
                      }
             break
@@ -3542,7 +3520,7 @@ anu = `${ucapanWaktu} ${pushname}
 ╭─❏ *『 INFO BOT 』*
 │ ➪ Prefix : ${prefix}
 │ ➪ Nama : ${global.namabot}
-│ ➪ Owner : ${global.namaowner}
+│ ➪ Owner : Farel & Naufal
 │ ➪ Mode : ${xavior.public ? 'Public' : 'Self'}
 │ ➪ Runtime : ${runtime(process.uptime())}
 │ ➪ Library : Baileys Multi Device
@@ -3581,13 +3559,13 @@ anu = `${ucapanWaktu} ${pushname}
 ╰───────────────❏`
 let btn = [{
                                 urlButton: {
-                                    displayText: 'My Youtube️',
-                                    url: 'https://youtube.com/channel/UCmUhiytK9WMYaOFgdOho_2g'
+                                    displayText: 'Facebook owner 1️',
+                                    url: 'hhttps://www.facebook.com/frel.frel.908132'
                                 }
                                 }, {
                                 urlButton: {
-                                    displayText: 'Website Bot',
-                                    url: 'https://github.com/AzzBott679'
+                                    displayText: 'Facebook owner 2',
+                                    url: 'https://www.facebook.com/muhammadnaufal.mushaddiq'
                                 }
                             }, {
                                 quickReplyButton: {
@@ -3607,15 +3585,15 @@ let btn = [{
                             }]
                          let setbot = db.data.settings[botNumber]
                         if (setbot.templateImage) {
-                        xavior.send5ButImg(m.chat, anu, 'AzzBot-MD', global.thumb, btn, global.thumb)
+                        xavior.send5ButImg(m.chat, anu, 'Rel°Bot-MD', global.thumb, btn, global.thumb)
                         } else if (setbot.templateGif) {
-                        xavior.send5ButGif(m.chat, anu, 'AzzBot-MD', global.visoka, btn, global.thumb)
+                        xavior.send5ButGif(m.chat, anu, 'Rel°Bot-MD', global.visoka, btn, global.thumb)
                         } else if (setbot.templateVid) {
-                        xavior.send5ButVid(m.chat, anu, 'AzzBot-MD', global.visoka, btn, global.thumb)
+                        xavior.send5ButVid(m.chat, anu, 'Rel°Bot-MD', global.visoka, btn, global.thumb)
                         } else if (setbot.templateMsg) {
-                        xavior.send5ButMsg(m.chat, anu, 'AzzBot-MD', btn)
+                        xavior.send5ButMsg(m.chat, anu, 'Rel°Bot-MD', btn)
                         } else if (setbot.templateLocation) {
-                        xavior.send5ButLoc(m.chat, anu, 'AzzBot-MD', global.thumb, btn)
+                        xavior.send5ButLoc(m.chat, anu, 'Rel°Bot-MD', global.thumb, btn)
                         }
                      }
             break
@@ -3628,7 +3606,7 @@ anu = `${ucapanWaktu} ${pushname}
 ╭─❏ *『 INFO BOT 』*
 │ ➪ Prefix : ${prefix}
 │ ➪ Nama : ${global.namabot}
-│ ➪ Owner : ${global.namaowner}
+│ ➪ Owner : Farel & Naufal
 │ ➪ Mode : ${xavior.public ? 'Public' : 'Self'}
 │ ➪ Runtime : ${runtime(process.uptime())}
 │ ➪ Library : Baileys Multi Device
@@ -3654,13 +3632,13 @@ anu = `${ucapanWaktu} ${pushname}
 ╰───────────────❏`
 let btn = [{
                                 urlButton: {
-                                    displayText: 'My Youtube️',
-                                    url: 'https://youtube.com/channel/UCmUhiytK9WMYaOFgdOho_2g'
+                                    displayText: 'Facebook owner 1️',
+                                    url: 'hhttps://www.facebook.com/frel.frel.908132'
                                 }
                                 }, {
                                 urlButton: {
-                                    displayText: 'Website Bot',
-                                    url: 'https://github.com/AzzBott679'
+                                    displayText: 'Facebook owner 2',
+                                    url: 'https://www.facebook.com/muhammadnaufal.mushaddiq'
                                 }
                             }, {
                                 quickReplyButton: {
@@ -3680,15 +3658,15 @@ let btn = [{
                             }]
                          let setbot = db.data.settings[botNumber]
                         if (setbot.templateImage) {
-                        xavior.send5ButImg(m.chat, anu, 'AzzBot-MD', global.thumb, btn, global.thumb)
+                        xavior.send5ButImg(m.chat, anu, 'Rel°Bot-MD', global.thumb, btn, global.thumb)
                         } else if (setbot.templateGif) {
-                        xavior.send5ButGif(m.chat, anu, 'AzzBot-MD', global.visoka, btn, global.thumb)
+                        xavior.send5ButGif(m.chat, anu, 'Rel°Bot-MD', global.visoka, btn, global.thumb)
                         } else if (setbot.templateVid) {
-                        xavior.send5ButVid(m.chat, anu, 'AzzBot-MD', global.visoka, btn, global.thumb)
+                        xavior.send5ButVid(m.chat, anu, 'Rel°Bot-MD', global.visoka, btn, global.thumb)
                         } else if (setbot.templateMsg) {
-                        xavior.send5ButMsg(m.chat, anu, 'AzzBot-MD', btn)
+                        xavior.send5ButMsg(m.chat, anu, 'Rel°Bot-MD', btn)
                         } else if (setbot.templateLocation) {
-                        xavior.send5ButLoc(m.chat, anu, 'AzzBot-MD', global.thumb, btn)
+                        xavior.send5ButLoc(m.chat, anu, 'Rel°Bot-MD', global.thumb, btn)
                         }
                      }
             break
@@ -3701,7 +3679,7 @@ anu = `${ucapanWaktu} ${pushname}
 ╭─❏ *『 INFO BOT 』*
 │ ➪ Prefix : ${prefix}
 │ ➪ Nama : ${global.namabot}
-│ ➪ Owner : ${global.namaowner}
+│ ➪ Owner : Farel & Naufal
 │ ➪ Mode : ${xavior.public ? 'Public' : 'Self'}
 │ ➪ Runtime : ${runtime(process.uptime())}
 │ ➪ Library : Baileys Multi Device
@@ -3734,13 +3712,13 @@ anu = `${ucapanWaktu} ${pushname}
 ╰───────────────❏`
 let btn = [{
                                 urlButton: {
-                                    displayText: 'My Youtube️',
-                                    url: 'https://youtube.com/channel/UCmUhiytK9WMYaOFgdOho_2g'
+                                    displayText: 'Facebook owner 1️',
+                                    url: 'hhttps://www.facebook.com/frel.frel.908132'
                                 }
                                 }, {
                                 urlButton: {
-                                    displayText: 'Website Bot',
-                                    url: 'https://github.com/AzzBott679'
+                                    displayText: 'Facebook owner 2',
+                                    url: 'https://www.facebook.com/muhammadnaufal.mushaddiq'
                                 }
                             }, {
                                 quickReplyButton: {
@@ -3760,15 +3738,15 @@ let btn = [{
                             }]
                          let setbot = db.data.settings[botNumber]
                         if (setbot.templateImage) {
-                        xavior.send5ButImg(m.chat, anu, 'AzzBot-MD', global.thumb, btn, global.thumb)
+                        xavior.send5ButImg(m.chat, anu, 'Rel°Bot-MD', global.thumb, btn, global.thumb)
                         } else if (setbot.templateGif) {
-                        xavior.send5ButGif(m.chat, anu, 'AzzBot-MD', global.visoka, btn, global.thumb)
+                        xavior.send5ButGif(m.chat, anu, 'Rel°Bot-MD', global.visoka, btn, global.thumb)
                         } else if (setbot.templateVid) {
-                        xavior.send5ButVid(m.chat, anu, 'AzzBot-MD', global.visoka, btn, global.thumb)
+                        xavior.send5ButVid(m.chat, anu, 'Rel°Bot-MD', global.visoka, btn, global.thumb)
                         } else if (setbot.templateMsg) {
-                        xavior.send5ButMsg(m.chat, anu, 'AzzBot-MD', btn)
+                        xavior.send5ButMsg(m.chat, anu, 'Rel°Bot-MD', btn)
                         } else if (setbot.templateLocation) {
-                        xavior.send5ButLoc(m.chat, anu, 'AzzBot-MD', global.thumb, btn)
+                        xavior.send5ButLoc(m.chat, anu, 'Rel°Bot-MD', global.thumb, btn)
                         }
                      }
             break
@@ -3781,7 +3759,7 @@ anu = `${ucapanWaktu} ${pushname}
 ╭─❏ *『 INFO BOT 』*
 │ ➪ Prefix : ${prefix}
 │ ➪ Nama : ${global.namabot}
-│ ➪ Owner : ${global.namaowner}
+│ ➪ Owner : Farel & Naufal
 │ ➪ Mode : ${xavior.public ? 'Public' : 'Self'}
 │ ➪ Runtime : ${runtime(process.uptime())}
 │ ➪ Library : Baileys Multi Device
@@ -3809,13 +3787,13 @@ anu = `${ucapanWaktu} ${pushname}
 ╰───────────────❏`
 let btn = [{
                                 urlButton: {
-                                    displayText: 'My Youtube️',
-                                    url: 'https://youtube.com/channel/UCmUhiytK9WMYaOFgdOho_2g'
+                                    displayText: 'Facebook owner 1️',
+                                    url: 'hhttps://www.facebook.com/frel.frel.908132'
                                 }
                                 }, {
                                 urlButton: {
-                                    displayText: 'Website Bot',
-                                    url: 'https://github.com/AzzBott679'
+                                    displayText: 'Facebook owner 2',
+                                    url: 'https://www.facebook.com/muhammadnaufal.mushaddiq'
                                 }
                             }, {
                                 quickReplyButton: {
@@ -3835,15 +3813,15 @@ let btn = [{
                             }]
                          let setbot = db.data.settings[botNumber]
                         if (setbot.templateImage) {
-                        xavior.send5ButImg(m.chat, anu, 'AzzBot-MD', global.thumb, btn, global.thumb)
+                        xavior.send5ButImg(m.chat, anu, 'Rel°Bot-MD', global.thumb, btn, global.thumb)
                         } else if (setbot.templateGif) {
-                        xavior.send5ButGif(m.chat, anu, 'AzzBot-MD', global.visoka, btn, global.thumb)
+                        xavior.send5ButGif(m.chat, anu, 'Rel°Bot-MD', global.visoka, btn, global.thumb)
                         } else if (setbot.templateVid) {
-                        xavior.send5ButVid(m.chat, anu, 'AzzBot-MD', global.visoka, btn, global.thumb)
+                        xavior.send5ButVid(m.chat, anu, 'Rel°Bot-MD', global.visoka, btn, global.thumb)
                         } else if (setbot.templateMsg) {
-                        xavior.send5ButMsg(m.chat, anu, 'AzzBot-MD', btn)
+                        xavior.send5ButMsg(m.chat, anu, 'Rel°Bot-MD', btn)
                         } else if (setbot.templateLocation) {
-                        xavior.send5ButLoc(m.chat, anu, 'AzzBot-MD', global.thumb, btn)
+                        xavior.send5ButLoc(m.chat, anu, 'Rel°Bot-MD', global.thumb, btn)
                         }
                      }
             break
@@ -3856,7 +3834,7 @@ anu = `${ucapanWaktu} ${pushname}
 ╭─❏ *『 INFO BOT 』*
 │ ➪ Prefix : ${prefix}
 │ ➪ Nama : ${global.namabot}
-│ ➪ Owner : ${global.namaowner}
+│ ➪ Owner : Farel & Naufal
 │ ➪ Mode : ${xavior.public ? 'Public' : 'Self'}
 │ ➪ Runtime : ${runtime(process.uptime())}
 │ ➪ Library : Baileys Multi Device
@@ -3887,13 +3865,13 @@ anu = `${ucapanWaktu} ${pushname}
 ╰───────────────❏`
 let btn = [{
                                 urlButton: {
-                                    displayText: 'My Youtube️',
-                                    url: 'https://youtube.com/channel/UCmUhiytK9WMYaOFgdOho_2g'
+                                    displayText: 'Facebook owner 1️',
+                                    url: 'hhttps://www.facebook.com/frel.frel.908132'
                                 }
                                 }, {
                                 urlButton: {
-                                    displayText: 'Website Bot',
-                                    url: 'https://github.com/AzzBott679'
+                                    displayText: 'Facebook owner 2',
+                                    url: 'https://www.facebook.com/muhammadnaufal.mushaddiq'
                                 }
                             }, {
                                 quickReplyButton: {
@@ -3913,15 +3891,15 @@ let btn = [{
                             }]
                          let setbot = db.data.settings[botNumber]
                         if (setbot.templateImage) {
-                        xavior.send5ButImg(m.chat, anu, 'AzzBot-MD', global.thumb, btn, global.thumb)
+                        xavior.send5ButImg(m.chat, anu, 'Rel°Bot-MD', global.thumb, btn, global.thumb)
                         } else if (setbot.templateGif) {
-                        xavior.send5ButGif(m.chat, anu, 'AzzBot-MD', global.visoka, btn, global.thumb)
+                        xavior.send5ButGif(m.chat, anu, 'Rel°Bot-MD', global.visoka, btn, global.thumb)
                         } else if (setbot.templateVid) {
-                        xavior.send5ButVid(m.chat, anu, 'AzzBot-MD', global.visoka, btn, global.thumb)
+                        xavior.send5ButVid(m.chat, anu, 'Rel°Bot-MD', global.visoka, btn, global.thumb)
                         } else if (setbot.templateMsg) {
-                        xavior.send5ButMsg(m.chat, anu, 'AzzBot-MD', btn)
+                        xavior.send5ButMsg(m.chat, anu, 'Rel°Bot-MD', btn)
                         } else if (setbot.templateLocation) {
-                        xavior.send5ButLoc(m.chat, anu, 'AzzBot-MD', global.thumb, btn)
+                        xavior.send5ButLoc(m.chat, anu, 'Rel°Bot-MD', global.thumb, btn)
                         }
                      }
             break
@@ -3934,7 +3912,7 @@ anu = `${ucapanWaktu} ${pushname}
 ╭─❏ *『 INFO BOT 』*
 │ ➪ Prefix : ${prefix}
 │ ➪ Nama : ${global.namabot}
-│ ➪ Owner : ${global.namaowner}
+│ ➪ Owner : Farel & Naufal
 │ ➪ Mode : ${xavior.public ? 'Public' : 'Self'}
 │ ➪ Runtime : ${runtime(process.uptime())}
 │ ➪ Library : Baileys Multi Device
@@ -3983,13 +3961,13 @@ anu = `${ucapanWaktu} ${pushname}
 ╰───────────────❏`
 let btn = [{
                                 urlButton: {
-                                    displayText: 'My Youtube️',
-                                    url: 'https://youtube.com/channel/UCmUhiytK9WMYaOFgdOho_2g'
+                                    displayText: 'Facebook owner 1️',
+                                    url: 'hhttps://www.facebook.com/frel.frel.908132'
                                 }
                                 }, {
                                 urlButton: {
-                                    displayText: 'Website Bot',
-                                    url: 'https://github.com/AzzBott679'
+                                    displayText: 'Facebook owner 2',
+                                    url: 'https://www.facebook.com/muhammadnaufal.mushaddiq'
                                 }
                             }, {
                                 quickReplyButton: {
@@ -4009,15 +3987,15 @@ let btn = [{
                             }]
                          let setbot = db.data.settings[botNumber]
                         if (setbot.templateImage) {
-                        xavior.send5ButImg(m.chat, anu, 'AzzBot-MD', global.thumb, btn, global.thumb)
+                        xavior.send5ButImg(m.chat, anu, 'Rel°Bot-MD', global.thumb, btn, global.thumb)
                         } else if (setbot.templateGif) {
-                        xavior.send5ButGif(m.chat, anu, 'AzzBot-MD', global.visoka, btn, global.thumb)
+                        xavior.send5ButGif(m.chat, anu, 'Rel°Bot-MD', global.visoka, btn, global.thumb)
                         } else if (setbot.templateVid) {
-                        xavior.send5ButVid(m.chat, anu, 'AzzBot-MD', global.visoka, btn, global.thumb)
+                        xavior.send5ButVid(m.chat, anu, 'Rel°Bot-MD', global.visoka, btn, global.thumb)
                         } else if (setbot.templateMsg) {
-                        xavior.send5ButMsg(m.chat, anu, 'AzzBot-MD', btn)
+                        xavior.send5ButMsg(m.chat, anu, 'Rel°Bot-MD', btn)
                         } else if (setbot.templateLocation) {
-                        xavior.send5ButLoc(m.chat, anu, 'AzzBot-MD', global.thumb, btn)
+                        xavior.send5ButLoc(m.chat, anu, 'Rel°Bot-MD', global.thumb, btn)
                         }
                      }
             break
@@ -4030,7 +4008,7 @@ anu = `${ucapanWaktu} ${pushname}
 ╭─❏ *『 INFO BOT 』*
 │ ➪ Prefix : ${prefix}
 │ ➪ Nama : ${global.namabot}
-│ ➪ Owner : ${global.namaowner}
+│ ➪ Owner : Farel & Naufal
 │ ➪ Mode : ${xavior.public ? 'Public' : 'Self'}
 │ ➪ Runtime : ${runtime(process.uptime())}
 │ ➪ Library : Baileys Multi Device
@@ -4060,13 +4038,13 @@ anu = `${ucapanWaktu} ${pushname}
 ╰───────────────❏`
 let btn = [{
                                 urlButton: {
-                                    displayText: 'My Youtube️',
-                                    url: 'https://youtube.com/channel/UCmUhiytK9WMYaOFgdOho_2g'
+                                    displayText: 'Facebook owner 1️',
+                                    url: 'hhttps://www.facebook.com/frel.frel.908132'
                                 }
                                 }, {
                                 urlButton: {
-                                    displayText: 'Website Bot',
-                                    url: 'https://github.com/AzzBott679'
+                                    displayText: 'Facebook owner 2',
+                                    url: 'https://www.facebook.com/muhammadnaufal.mushaddiq'
                                 }
                             }, {
                                 quickReplyButton: {
@@ -4086,15 +4064,15 @@ let btn = [{
                             }]
                          let setbot = db.data.settings[botNumber]
                         if (setbot.templateImage) {
-                        xavior.send5ButImg(m.chat, anu, 'AzzBot-MD', global.thumb, btn, global.thumb)
+                        xavior.send5ButImg(m.chat, anu, 'Rel°Bot-MD', global.thumb, btn, global.thumb)
                         } else if (setbot.templateGif) {
-                        xavior.send5ButGif(m.chat, anu, 'AzzBot-MD', global.visoka, btn, global.thumb)
+                        xavior.send5ButGif(m.chat, anu, 'Rel°Bot-MD', global.visoka, btn, global.thumb)
                         } else if (setbot.templateVid) {
-                        xavior.send5ButVid(m.chat, anu, 'AzzBot-MD', global.visoka, btn, global.thumb)
+                        xavior.send5ButVid(m.chat, anu, 'Rel°Bot-MD', global.visoka, btn, global.thumb)
                         } else if (setbot.templateMsg) {
-                        xavior.send5ButMsg(m.chat, anu, 'AzzBot-MD', btn)
+                        xavior.send5ButMsg(m.chat, anu, 'Rel°Bot-MD', btn)
                         } else if (setbot.templateLocation) {
-                        xavior.send5ButLoc(m.chat, anu, 'AzzBot-MD', global.thumb, btn)
+                        xavior.send5ButLoc(m.chat, anu, 'Rel°Bot-MD', global.thumb, btn)
                         }
                      }
             break
@@ -4107,7 +4085,7 @@ anu = `${ucapanWaktu} ${pushname}
 ╭─❏ *『 INFO BOT 』*
 │ ➪ Prefix : ${prefix}
 │ ➪ Nama : ${global.namabot}
-│ ➪ Owner : ${global.namaowner}
+│ ➪ Owner : Farel & Naufal
 │ ➪ Mode : ${xavior.public ? 'Public' : 'Self'}
 │ ➪ Runtime : ${runtime(process.uptime())}
 │ ➪ Library : Baileys Multi Device
@@ -4134,13 +4112,13 @@ anu = `${ucapanWaktu} ${pushname}
 ╰───────────────❏`
 let btn = [{
                                 urlButton: {
-                                    displayText: 'My Youtube️',
-                                    url: 'https://youtube.com/channel/UCmUhiytK9WMYaOFgdOho_2g'
+                                    displayText: 'Facebook owner 1️',
+                                    url: 'hhttps://www.facebook.com/frel.frel.908132'
                                 }
                                 }, {
                                 urlButton: {
-                                    displayText: 'Website Bot',
-                                    url: 'https://github.com/AzzBott679'
+                                    displayText: 'Facebook owner 2',
+                                    url: 'https://www.facebook.com/muhammadnaufal.mushaddiq'
                                 }
                             }, {
                                 quickReplyButton: {
@@ -4160,15 +4138,15 @@ let btn = [{
                             }]
                          let setbot = db.data.settings[botNumber]
                         if (setbot.templateImage) {
-                        xavior.send5ButImg(m.chat, anu, 'AzzBot-MD', global.thumb, btn, global.thumb)
+                        xavior.send5ButImg(m.chat, anu, 'Rel°Bot-MD', global.thumb, btn, global.thumb)
                         } else if (setbot.templateGif) {
-                        xavior.send5ButGif(m.chat, anu, 'AzzBot-MD', global.visoka, btn, global.thumb)
+                        xavior.send5ButGif(m.chat, anu, 'Rel°Bot-MD', global.visoka, btn, global.thumb)
                         } else if (setbot.templateVid) {
-                        xavior.send5ButVid(m.chat, anu, 'AzzBot-MD', global.visoka, btn, global.thumb)
+                        xavior.send5ButVid(m.chat, anu, 'Rel°Bot-MD', global.visoka, btn, global.thumb)
                         } else if (setbot.templateMsg) {
-                        xavior.send5ButMsg(m.chat, anu, 'AzzBot-MD', btn)
+                        xavior.send5ButMsg(m.chat, anu, 'Rel°Bot-MD', btn)
                         } else if (setbot.templateLocation) {
-                        xavior.send5ButLoc(m.chat, anu, 'AzzBot-MD', global.thumb, btn)
+                        xavior.send5ButLoc(m.chat, anu, 'Rel°Bot-MD', global.thumb, btn)
                         }
                      }
             break
@@ -4181,7 +4159,7 @@ anu = `${ucapanWaktu} ${pushname}
 ╭─❏ *『 INFO BOT 』*
 │ ➪ Prefix : ${prefix}
 │ ➪ Nama : ${global.namabot}
-│ ➪ Owner : ${global.namaowner}
+│ ➪ Owner : Farel & Naufal
 │ ➪ Mode : ${xavior.public ? 'Public' : 'Self'}
 │ ➪ Runtime : ${runtime(process.uptime())}
 │ ➪ Library : Baileys Multi Device
@@ -4213,13 +4191,13 @@ anu = `${ucapanWaktu} ${pushname}
 ╰───────────────❏`
 let btn = [{
                                 urlButton: {
-                                    displayText: 'My Youtube️',
-                                    url: 'https://youtube.com/channel/UCmUhiytK9WMYaOFgdOho_2g'
+                                    displayText: 'Facebook owner 1️',
+                                    url: 'hhttps://www.facebook.com/frel.frel.908132'
                                 }
                                 }, {
                                 urlButton: {
-                                    displayText: 'Website Bot',
-                                    url: 'https://github.com/AzzBott679'
+                                    displayText: 'Facebook owner 2',
+                                    url: 'https://www.facebook.com/muhammadnaufal.mushaddiq'
                                 }
                             }, {
                                 quickReplyButton: {
@@ -4239,15 +4217,15 @@ let btn = [{
                             }]
                          let setbot = db.data.settings[botNumber]
                         if (setbot.templateImage) {
-                        xavior.send5ButImg(m.chat, anu, 'AzzBot-MD', global.thumb, btn, global.thumb)
+                        xavior.send5ButImg(m.chat, anu, 'Rel°Bot-MD', global.thumb, btn, global.thumb)
                         } else if (setbot.templateGif) {
-                        xavior.send5ButGif(m.chat, anu, 'AzzBot-MD', global.visoka, btn, global.thumb)
+                        xavior.send5ButGif(m.chat, anu, 'Rel°Bot-MD', global.visoka, btn, global.thumb)
                         } else if (setbot.templateVid) {
-                        xavior.send5ButVid(m.chat, anu, 'AzzBot-MD', global.visoka, btn, global.thumb)
+                        xavior.send5ButVid(m.chat, anu, 'Rel°Bot-MD', global.visoka, btn, global.thumb)
                         } else if (setbot.templateMsg) {
-                        xavior.send5ButMsg(m.chat, anu, 'AzzBot-MD', btn)
+                        xavior.send5ButMsg(m.chat, anu, 'Rel°Bot-MD', btn)
                         } else if (setbot.templateLocation) {
-                        xavior.send5ButLoc(m.chat, anu, 'AzzBot-MD', global.thumb, btn)
+                        xavior.send5ButLoc(m.chat, anu, 'Rel°Bot-MD', global.thumb, btn)
                         }
                      }
             break
@@ -4260,7 +4238,7 @@ anu = `${ucapanWaktu} ${pushname}
 ╭─❏ *『 INFO BOT 』*
 │ ➪ Prefix : ${prefix}
 │ ➪ Nama : ${global.namabot}
-│ ➪ Owner : ${global.namaowner}
+│ ➪ Owner : Farel & Naufal
 │ ➪ Mode : ${xavior.public ? 'Public' : 'Self'}
 │ ➪ Runtime : ${runtime(process.uptime())}
 │ ➪ Library : Baileys Multi Device
@@ -4308,13 +4286,13 @@ anu = `${ucapanWaktu} ${pushname}
 ╰───────────────❏`
 let btn = [{
                                 urlButton: {
-                                    displayText: 'My Youtube️',
-                                    url: 'https://youtube.com/channel/UCmUhiytK9WMYaOFgdOho_2g'
+                                    displayText: 'Facebook owner 1️',
+                                    url: 'hhttps://www.facebook.com/frel.frel.908132'
                                 }
                                 }, {
                                 urlButton: {
-                                    displayText: 'Website Bot',
-                                    url: 'https://github.com/AzzBott679'
+                                    displayText: 'Facebook owner 2',
+                                    url: 'https://www.facebook.com/muhammadnaufal.mushaddiq'
                                 }
                             }, {
                                 quickReplyButton: {
@@ -4334,15 +4312,15 @@ let btn = [{
                             }]
                          let setbot = db.data.settings[botNumber]
                         if (setbot.templateImage) {
-                        xavior.send5ButImg(m.chat, anu, 'AzzBot-MD', global.thumb, btn, global.thumb)
+                        xavior.send5ButImg(m.chat, anu, 'Rel°Bot-MD', global.thumb, btn, global.thumb)
                         } else if (setbot.templateGif) {
-                        xavior.send5ButGif(m.chat, anu, 'AzzBot-MD', global.visoka, btn, global.thumb)
+                        xavior.send5ButGif(m.chat, anu, 'Rel°Bot-MD', global.visoka, btn, global.thumb)
                         } else if (setbot.templateVid) {
-                        xavior.send5ButVid(m.chat, anu, 'AzzBot-MD', global.visoka, btn, global.thumb)
+                        xavior.send5ButVid(m.chat, anu, 'Rel°Bot-MD', global.visoka, btn, global.thumb)
                         } else if (setbot.templateMsg) {
-                        xavior.send5ButMsg(m.chat, anu, 'AzzBot-MD', btn)
+                        xavior.send5ButMsg(m.chat, anu, 'Rel°Bot-MD', btn)
                         } else if (setbot.templateLocation) {
-                        xavior.send5ButLoc(m.chat, anu, 'AzzBot-MD', global.thumb, btn)
+                        xavior.send5ButLoc(m.chat, anu, 'Rel°Bot-MD', global.thumb, btn)
                         }
                      }
             break
@@ -4355,7 +4333,7 @@ anu = `${ucapanWaktu} ${pushname}
 ╭─❏ *『 INFO BOT 』*
 │ ➪ Prefix : ${prefix}
 │ ➪ Nama : ${global.namabot}
-│ ➪ Owner : ${global.namaowner}
+│ ➪ Owner : Farel & Naufal
 │ ➪ Mode : ${xavior.public ? 'Public' : 'Self'}
 │ ➪ Runtime : ${runtime(process.uptime())}
 │ ➪ Library : Baileys Multi Device
@@ -4391,13 +4369,13 @@ anu = `${ucapanWaktu} ${pushname}
 ╰───────────────❏`
 let btn = [{
                                 urlButton: {
-                                    displayText: 'My Youtube️',
-                                    url: 'https://youtube.com/channel/UCmUhiytK9WMYaOFgdOho_2g'
+                                    displayText: 'Facebook owner 1️',
+                                    url: 'hhttps://www.facebook.com/frel.frel.908132'
                                 }
                                 }, {
                                 urlButton: {
-                                    displayText: 'Website Bot',
-                                    url: 'https://github.com/AzzBott679'
+                                    displayText: 'Facebook owner 2',
+                                    url: 'https://www.facebook.com/muhammadnaufal.mushaddiq'
                                 }
                             }, {
                                 quickReplyButton: {
@@ -4417,15 +4395,15 @@ let btn = [{
                             }]
                          let setbot = db.data.settings[botNumber]
                         if (setbot.templateImage) {
-                        xavior.send5ButImg(m.chat, anu, 'AzzBot-MD', global.thumb, btn, global.thumb)
+                        xavior.send5ButImg(m.chat, anu, 'Rel°Bot-MD', global.thumb, btn, global.thumb)
                         } else if (setbot.templateGif) {
-                        xavior.send5ButGif(m.chat, anu, 'AzzBot-MD', global.visoka, btn, global.thumb)
+                        xavior.send5ButGif(m.chat, anu, 'Rel°Bot-MD', global.visoka, btn, global.thumb)
                         } else if (setbot.templateVid) {
-                        xavior.send5ButVid(m.chat, anu, 'AzzBot-MD', global.visoka, btn, global.thumb)
+                        xavior.send5ButVid(m.chat, anu, 'Rel°Bot-MD', global.visoka, btn, global.thumb)
                         } else if (setbot.templateMsg) {
-                        xavior.send5ButMsg(m.chat, anu, 'AzzBot-MD', btn)
+                        xavior.send5ButMsg(m.chat, anu, 'Rel°Bot-MD', btn)
                         } else if (setbot.templateLocation) {
-                        xavior.send5ButLoc(m.chat, anu, 'AzzBot-MD', global.thumb, btn)
+                        xavior.send5ButLoc(m.chat, anu, 'Rel°Bot-MD', global.thumb, btn)
                         }
                      }
             break
@@ -4438,7 +4416,7 @@ anu = `${ucapanWaktu} ${pushname}
 ╭─❏ *『 INFO BOT 』*
 │ ➪ Prefix : ${prefix}
 │ ➪ Nama : ${global.namabot}
-│ ➪ Owner : ${global.namaowner}
+│ ➪ Owner : Farel & Naufal
 │ ➪ Mode : ${xavior.public ? 'Public' : 'Self'}
 │ ➪ Runtime : ${runtime(process.uptime())}
 │ ➪ Library : Baileys Multi Device
@@ -4463,16 +4441,17 @@ anu = `${ucapanWaktu} ${pushname}
 │➪ ${prefix}listgc
 │➪ ${prefix}listonline
 │➪ ${prefix}speedtest
+│➪ ${prefix}Infoowner
 ╰───────────────❏`
 let btn = [{
                                 urlButton: {
-                                    displayText: 'My Youtube️',
-                                    url: 'https://youtube.com/channel/UCmUhiytK9WMYaOFgdOho_2g'
+                                    displayText: 'Facebook owner 1️',
+                                    url: 'hhttps://www.facebook.com/frel.frel.908132'
                                 }
                                 }, {
                                 urlButton: {
-                                    displayText: 'Website Bot',
-                                    url: 'https://github.com/AzzBott679'
+                                    displayText: 'Facebook owner 2',
+                                    url: 'https://www.facebook.com/muhammadnaufal.mushaddiq'
                                 }
                             }, {
                                 quickReplyButton: {
@@ -4492,15 +4471,15 @@ let btn = [{
                             }]
                          let setbot = db.data.settings[botNumber]
                         if (setbot.templateImage) {
-                        xavior.send5ButImg(m.chat, anu, 'AzzBot-MD', global.thumb, btn, global.thumb)
+                        xavior.send5ButImg(m.chat, anu, 'Rel°Bot-MD', global.thumb, btn, global.thumb)
                         } else if (setbot.templateGif) {
-                        xavior.send5ButGif(m.chat, anu, 'AzzBot-MD', global.visoka, btn, global.thumb)
+                        xavior.send5ButGif(m.chat, anu, 'Rel°Bot-MD', global.visoka, btn, global.thumb)
                         } else if (setbot.templateVid) {
-                        xavior.send5ButVid(m.chat, anu, 'AzzBot-MD', global.visoka, btn, global.thumb)
+                        xavior.send5ButVid(m.chat, anu, 'Rel°Bot-MD', global.visoka, btn, global.thumb)
                         } else if (setbot.templateMsg) {
-                        xavior.send5ButMsg(m.chat, anu, 'AzzBot-MD', btn)
+                        xavior.send5ButMsg(m.chat, anu, 'Rel°Bot-MD', btn)
                         } else if (setbot.templateLocation) {
-                        xavior.send5ButLoc(m.chat, anu, 'AzzBot-MD', global.thumb, btn)
+                        xavior.send5ButLoc(m.chat, anu, 'Rel°Bot-MD', global.thumb, btn)
                         }
                      }
             break
@@ -4513,7 +4492,7 @@ anu = `${ucapanWaktu} ${pushname}
 ╭─❏ *『 INFO BOT 』*
 │ ➪ Prefix : ${prefix}
 │ ➪ Nama : ${global.namabot}
-│ ➪ Owner : ${global.namaowner}
+│ ➪ Owner : Farel & Naufal
 │ ➪ Mode : ${xavior.public ? 'Public' : 'Self'}
 │ ➪ Runtime : ${runtime(process.uptime())}
 │ ➪ Library : Baileys Multi Device
@@ -4539,13 +4518,13 @@ anu = `${ucapanWaktu} ${pushname}
 ╰───────────────❏`
 let btn = [{
                                 urlButton: {
-                                    displayText: 'My Youtube️',
-                                    url: 'https://youtube.com/channel/UCmUhiytK9WMYaOFgdOho_2g'
+                                    displayText: 'Facebook owner 1️',
+                                    url: 'hhttps://www.facebook.com/frel.frel.908132'
                                 }
                                 }, {
                                 urlButton: {
-                                    displayText: 'Website Bot',
-                                    url: 'https://github.com/AzzBott679'
+                                    displayText: 'Facebook owner 2',
+                                    url: 'https://www.facebook.com/muhammadnaufal.mushaddiq'
                                 }
                             }, {
                                 quickReplyButton: {
@@ -4565,15 +4544,15 @@ let btn = [{
                             }]
                          let setbot = db.data.settings[botNumber]
                         if (setbot.templateImage) {
-                        xavior.send5ButImg(m.chat, anu, 'AzzBot-MD', global.thumb, btn, global.thumb)
+                        xavior.send5ButImg(m.chat, anu, 'Rel°Bot-MD', global.thumb, btn, global.thumb)
                         } else if (setbot.templateGif) {
-                        xavior.send5ButGif(m.chat, anu, 'AzzBot-MD', global.visoka, btn, global.thumb)
+                        xavior.send5ButGif(m.chat, anu, 'Rel°Bot-MD', global.visoka, btn, global.thumb)
                         } else if (setbot.templateVid) {
-                        xavior.send5ButVid(m.chat, anu, 'AzzBot-MD', global.visoka, btn, global.thumb)
+                        xavior.send5ButVid(m.chat, anu, 'Rel°Bot-MD', global.visoka, btn, global.thumb)
                         } else if (setbot.templateMsg) {
-                        xavior.send5ButMsg(m.chat, anu, 'AzzBot-MD', btn)
+                        xavior.send5ButMsg(m.chat, anu, 'Rel°Bot-MD', btn)
                         } else if (setbot.templateLocation) {
-                        xavior.send5ButLoc(m.chat, anu, 'AzzBot-MD', global.thumb, btn)
+                        xavior.send5ButLoc(m.chat, anu, 'Rel°Bot-MD', global.thumb, btn)
                         }
                      }
             break
@@ -4586,7 +4565,7 @@ anu = `${ucapanWaktu} ${pushname}
 ╭─❏ *『 INFO BOT 』*
 │ ➪ Prefix : ${prefix}
 │ ➪ Nama : ${global.namabot}
-│ ➪ Owner : ${global.namaowner}
+│ ➪ Owner : Farel & Naufal
 │ ➪ Mode : ${xavior.public ? 'Public' : 'Self'}
 │ ➪ Runtime : ${runtime(process.uptime())}
 │ ➪ Library : Baileys Multi Device
@@ -4608,13 +4587,13 @@ anu = `${ucapanWaktu} ${pushname}
 ╰───────────────❏`
 let btn = [{
                                 urlButton: {
-                                    displayText: 'My Youtube️',
-                                    url: 'https://youtube.com/channel/UCmUhiytK9WMYaOFgdOho_2g'
+                                    displayText: 'Facebook owner 1️',
+                                    url: 'hhttps://www.facebook.com/frel.frel.908132'
                                 }
                                 }, {
                                 urlButton: {
-                                    displayText: 'Website Bot',
-                                    url: 'https://github.com/AzzBott679'
+                                    displayText: 'Facebook owner 2',
+                                    url: 'https://www.facebook.com/muhammadnaufal.mushaddiq'
                                 }
                             }, {
                                 quickReplyButton: {
@@ -4634,15 +4613,15 @@ let btn = [{
                             }]
                          let setbot = db.data.settings[botNumber]
                         if (setbot.templateImage) {
-                        xavior.send5ButImg(m.chat, anu, 'AzzBot-MD', global.thumb, btn, global.thumb)
+                        xavior.send5ButImg(m.chat, anu, 'Rel°Bot-MD', global.thumb, btn, global.thumb)
                         } else if (setbot.templateGif) {
-                        xavior.send5ButGif(m.chat, anu, 'AzzBot-MD', global.visoka, btn, global.thumb)
+                        xavior.send5ButGif(m.chat, anu, 'Rel°Bot-MD', global.visoka, btn, global.thumb)
                         } else if (setbot.templateVid) {
-                        xavior.send5ButVid(m.chat, anu, 'AzzBot-MD', global.visoka, btn, global.thumb)
+                        xavior.send5ButVid(m.chat, anu, 'Rel°Bot-MD', global.visoka, btn, global.thumb)
                         } else if (setbot.templateMsg) {
-                        xavior.send5ButMsg(m.chat, anu, 'AzzBot-MD', btn)
+                        xavior.send5ButMsg(m.chat, anu, 'Rel°Bot-MD', btn)
                         } else if (setbot.templateLocation) {
-                        xavior.send5ButLoc(m.chat, anu, 'AzzBot-MD', global.thumb, btn)
+                        xavior.send5ButLoc(m.chat, anu, 'Rel°Bot-MD', global.thumb, btn)
                         }
                      }
             break
@@ -4655,7 +4634,7 @@ anu = `${ucapanWaktu} ${pushname}
 ╭─❏ *『 INFO BOT 』*
 │ ➪ Prefix : ${prefix}
 │ ➪ Nama : ${global.namabot}
-│ ➪ Owner : ${global.namaowner}
+│ ➪ Owner : Farel & Naufal
 │ ➪ Mode : ${xavior.public ? 'Public' : 'Self'}
 │ ➪ Runtime : ${runtime(process.uptime())}
 │ ➪ Library : Baileys Multi Device
@@ -4678,13 +4657,13 @@ anu = `${ucapanWaktu} ${pushname}
 ╰───────────────❏`
 let btn = [{
                                 urlButton: {
-                                    displayText: 'My Youtube️',
-                                    url: 'https://youtube.com/channel/UCmUhiytK9WMYaOFgdOho_2g'
+                                    displayText: 'Facebook owner 1️',
+                                    url: 'hhttps://www.facebook.com/frel.frel.908132'
                                 }
                                 }, {
                                 urlButton: {
-                                    displayText: 'Website Bot',
-                                    url: 'https://github.com/AzzBott679'
+                                    displayText: 'Facebook owner 2',
+                                    url: 'https://www.facebook.com/muhammadnaufal.mushaddiq'
                                 }
                             }, {
                                 quickReplyButton: {
@@ -4704,15 +4683,15 @@ let btn = [{
                             }]
                          let setbot = db.data.settings[botNumber]
                         if (setbot.templateImage) {
-                        xavior.send5ButImg(m.chat, anu, 'AzzBot-MD', global.thumb, btn, global.thumb)
+                        xavior.send5ButImg(m.chat, anu, 'Rel°Bot-MD', global.thumb, btn, global.thumb)
                         } else if (setbot.templateGif) {
-                        xavior.send5ButGif(m.chat, anu, 'AzzBot-MD', global.visoka, btn, global.thumb)
+                        xavior.send5ButGif(m.chat, anu, 'Rel°Bot-MD', global.visoka, btn, global.thumb)
                         } else if (setbot.templateVid) {
-                        xavior.send5ButVid(m.chat, anu, 'AzzBot-MD', global.visoka, btn, global.thumb)
+                        xavior.send5ButVid(m.chat, anu, 'Rel°Bot-MD', global.visoka, btn, global.thumb)
                         } else if (setbot.templateMsg) {
-                        xavior.send5ButMsg(m.chat, anu, 'AzzBot-MD', btn)
+                        xavior.send5ButMsg(m.chat, anu, 'Rel°Bot-MD', btn)
                         } else if (setbot.templateLocation) {
-                        xavior.send5ButLoc(m.chat, anu, 'AzzBot-MD', global.thumb, btn)
+                        xavior.send5ButLoc(m.chat, anu, 'Rel°Bot-MD', global.thumb, btn)
                         }
                      }
             break
@@ -4725,7 +4704,7 @@ anu = `${ucapanWaktu} ${pushname}
 ╭─❏ *『 INFO BOT 』*
 │ ➪ Prefix : ${prefix}
 │ ➪ Nama : ${global.namabot}
-│ ➪ Owner : ${global.namaowner}
+│ ➪ Owner : Farel & Naufal
 │ ➪ Mode : ${xavior.public ? 'Public' : 'Self'}
 │ ➪ Runtime : ${runtime(process.uptime())}
 │ ➪ Library : Baileys Multi Device
@@ -4754,13 +4733,13 @@ anu = `${ucapanWaktu} ${pushname}
 ╰───────────────❏`
 let btn = [{
                                 urlButton: {
-                                    displayText: 'My Youtube️',
-                                    url: 'https://youtube.com/channel/UCmUhiytK9WMYaOFgdOho_2g'
+                                    displayText: 'Facebook owner 1️',
+                                    url: 'hhttps://www.facebook.com/frel.frel.908132'
                                 }
                                 }, {
                                 urlButton: {
-                                    displayText: 'Website Bot',
-                                    url: 'https://github.com/AzzBott679'
+                                    displayText: 'Facebook owner 2',
+                                    url: 'https://www.facebook.com/muhammadnaufal.mushaddiq'
                                 }
                             }, {
                                 quickReplyButton: {
@@ -4780,30 +4759,31 @@ let btn = [{
                             }]
                          let setbot = db.data.settings[botNumber]
                         if (setbot.templateImage) {
-                        xavior.send5ButImg(m.chat, anu, 'AzzBot-MD', global.thumb, btn, global.thumb)
+                        xavior.send5ButImg(m.chat, anu, 'Rel°Bot-MD', global.thumb, btn, global.thumb)
                         } else if (setbot.templateGif) {
-                        xavior.send5ButGif(m.chat, anu, 'AzzBot-MD', global.visoka, btn, global.thumb)
+                        xavior.send5ButGif(m.chat, anu, 'Rel°Bot-MD', global.visoka, btn, global.thumb)
                         } else if (setbot.templateVid) {
-                        xavior.send5ButVid(m.chat, anu, 'AzzBot-MD', global.visoka, btn, global.thumb)
+                        xavior.send5ButVid(m.chat, anu, 'Rel°Bot-MD', global.visoka, btn, global.thumb)
                         } else if (setbot.templateMsg) {
-                        xavior.send5ButMsg(m.chat, anu, 'AzzBot-MD', btn)
+                        xavior.send5ButMsg(m.chat, anu, 'Rel°Bot-MD', btn)
                         } else if (setbot.templateLocation) {
-                        xavior.send5ButLoc(m.chat, anu, 'AzzBot-MD', global.thumb, btn)
+                        xavior.send5ButLoc(m.chat, anu, 'Rel°Bot-MD', global.thumb, btn)
                         }
                      }
             break
                    
             case 'menu': case 'help': case '?': {
-                anu = `${ucapanWaktu} Beban🙏\n\nI Am ${global.namabot}, Bot Ini Gak Secanggih Bot Ditahun 3000an.\n\nKarna ${global.namabot} Adalah Hasil Begadang YahyaGanzz.\n\nKalau Abng Makai Botnya Tapi Ngelag, Itu Karna Abang Wibu🗿`
+                anu = `${ucapanWaktu} Beban🙏
+                Untuk melihat list menu, silakan tekan *FITUR BOT*`
                 let btn = [{
                                 urlButton: {
-                                    displayText: 'My Youtube️',
-                                    url: 'https://youtube.com/channel/UCmUhiytK9WMYaOFgdOho_2g'
+                                    displayText: 'Facebook owner 1️',
+                                    url: 'hhttps://www.facebook.com/frel.frel.908132'
                                 }
                                 }, {
                                 urlButton: {
-                                    displayText: 'Website Bot',
-                                    url: 'https://github.com/AzzBott679'
+                                    displayText: 'Facebook owner 2',
+                                    url: 'https://www.facebook.com/muhammadnaufal.mushaddiq'
                                 }
                             }, {
                                 quickReplyButton: {
@@ -4823,48 +4803,45 @@ let btn = [{
                             }]
                          let setbot = db.data.settings[botNumber]
                         if (setbot.templateImage) {
-                        xavior.send5ButImg(m.chat, anu, 'AzzBot-MD', global.thumb, btn, global.thumb)
+                        xavior.send5ButImg(m.chat, anu, 'Rel°Bot-MD', global.thumb, btn, global.thumb)
                         } else if (setbot.templateGif) {
-                        xavior.send5ButGif(m.chat, anu, 'AzzBot-MD', global.visoka, btn, global.thumb)
+                        xavior.send5ButGif(m.chat, anu, 'Rel°Bot-MD', global.visoka, btn, global.thumb)
                         } else if (setbot.templateVid) {
-                        xavior.send5ButVid(m.chat, anu, 'AzzBot-MD', global.visoka, btn, global.thumb)
+                        xavior.send5ButVid(m.chat, anu, 'Rel°Bot-MD', global.visoka, btn, global.thumb)
                         } else if (setbot.templateMsg) {
-                        xavior.send5ButMsg(m.chat, anu, 'AzzBot-MD', btn)
+                        xavior.send5ButMsg(m.chat, anu, 'Rel°Bot-MD', btn)
                         } else if (setbot.templateLocation) {
-                        xavior.send5ButLoc(m.chat, anu, 'AzzBot-MD', global.thumb, btn)
+                        xavior.send5ButLoc(m.chat, anu, 'Rel°Bot-MD', global.thumb, btn)
                         }
                      }
             break
 
 case 'donasi': {
-anu = `╭─❏ *『 DONASI 』*
-│ ➪ Dana : 081511480762
-│ ➪ Gopay : 081511480762
-╰───────────────❏
-
-*TERIMA KASIH BUAT YANG SUDAH MAU DONASI🤗*`
+anu = `*『 DONASI 』*
+Terimakasih atas niat anda untuk donasi!!
+tapi sepertinya kami tidak memerlukan:) Karena kami merasa pelayanan bot kami tidak seberapa;)`
 let btn = [{
                                 urlButton: {
-                                    displayText: 'My Youtube️',
-                                    url: 'https://youtube.com/channel/UCmUhiytK9WMYaOFgdOho_2g'
+                                    displayText: 'Facebook owner 1️',
+                                    url: 'hhttps://www.facebook.com/frel.frel.908132'
                                 }
                                 }, {
                                 urlButton: {
-                                    displayText: 'Website Bot',
-                                    url: 'https://github.com/AzzBott679'
+                                    displayText: 'Facebook owner 2',
+                                    url: 'https://www.facebook.com/muhammadnaufal.mushaddiq'
                                 }
                             }]
                          let setbot = db.data.settings[botNumber]
                         if (setbot.templateImage) {
-                        xavior.send5ButImg(m.chat, anu, 'AzzBot-MD', global.thumb, btn, global.thumb)
+                        xavior.send5ButImg(m.chat, anu, 'Rel°Bot-MD', global.thumb, btn, global.thumb)
                         } else if (setbot.templateGif) {
-                        xavior.send5ButGif(m.chat, anu, 'AzzBot-MD', global.visoka, btn, global.thumb)
+                        xavior.send5ButGif(m.chat, anu, 'Rel°Bot-MD', global.visoka, btn, global.thumb)
                         } else if (setbot.templateVid) {
-                        xavior.send5ButVid(m.chat, anu, 'AzzBot-MD', global.visoka, btn, global.thumb)
+                        xavior.send5ButVid(m.chat, anu, 'Rel°Bot-MD', global.visoka, btn, global.thumb)
                         } else if (setbot.templateMsg) {
-                        xavior.send5ButMsg(m.chat, anu, 'AzzBot-MD', btn)
+                        xavior.send5ButMsg(m.chat, anu, 'Rel°Bot-MD', btn)
                         } else if (setbot.templateLocation) {
-                        xavior.send5ButLoc(m.chat, anu, 'AzzBot-MD', global.thumb, btn)
+                        xavior.send5ButLoc(m.chat, anu, 'Rel°Bot-MD', global.thumb, btn)
                         }
                      }
             break
@@ -4884,8 +4861,6 @@ Kendala Dari Jaringan, Signal,
 Atau Bahkan Terbanned Dari
 Pihak WhatsApp
 
-👦 : Scriptnya Beli Dimana?
-🤖 : Script Gak Dijual, Tapi Bisa Cari Di YT MBY•OFFICIAL
 
 👦 : Boleh Masukin Ke Grup Saia
 Tidak?
@@ -4919,13 +4894,13 @@ Yang Sudah Membantu Dalam
 Pembuatan Bot Ini`
 let btn = [{
                                 urlButton: {
-                                    displayText: 'My Youtube️',
-                                    url: 'https://youtube.com/channel/UCmUhiytK9WMYaOFgdOho_2g'
+                                    displayText: 'Facebook owner 1️',
+                                    url: 'hhttps://www.facebook.com/frel.frel.908132'
                                 }
                                 }, {
                                 urlButton: {
-                                    displayText: 'Website Bot',
-                                    url: 'https://github.com/AzzBott679'
+                                    displayText: 'Facebook owner 2',
+                                    url: 'https://www.facebook.com/muhammadnaufal.mushaddiq'
                                 }
                                 }, {
                                 quickReplyButton: {
@@ -4945,15 +4920,15 @@ let btn = [{
                             }]
                          let setbot = db.data.settings[botNumber]
                         if (setbot.templateImage) {
-                        xavior.send5ButImg(m.chat, anu, 'AzzBot-MD', global.thumb, btn, global.thumb)
+                        xavior.send5ButImg(m.chat, anu, 'Rel°Bot-MD', global.thumb, btn, global.thumb)
                         } else if (setbot.templateGif) {
-                        xavior.send5ButGif(m.chat, anu, 'AzzBot-MD', global.visoka, btn, global.thumb)
+                        xavior.send5ButGif(m.chat, anu, 'Rel°Bot-MD', global.visoka, btn, global.thumb)
                         } else if (setbot.templateVid) {
-                        xavior.send5ButVid(m.chat, anu, 'AzzBot-MD', global.visoka, btn, global.thumb)
+                        xavior.send5ButVid(m.chat, anu, 'Rel°Bot-MD', global.visoka, btn, global.thumb)
                         } else if (setbot.templateMsg) {
-                        xavior.send5ButMsg(m.chat, anu, 'AzzBot-MD', btn)
+                        xavior.send5ButMsg(m.chat, anu, 'Rel°Bot-MD', btn)
                         } else if (setbot.templateLocation) {
-                        xavior.send5ButLoc(m.chat, anu, 'AzzBot-MD', global.thumb, btn)
+                        xavior.send5ButLoc(m.chat, anu, 'Rel°Bot-MD', global.thumb, btn)
                         }
                      }
             break
@@ -4979,13 +4954,13 @@ Penyedia Rest Api :
 https://zenzapis.xyz`
 	let btn = [{
                                 urlButton: {
-                                    displayText: 'My Youtube️',
-                                    url: 'https://youtube.com/channel/UCmUhiytK9WMYaOFgdOho_2g'
+                                    displayText: 'Facebook owner 1️',
+                                    url: 'hhttps://www.facebook.com/frel.frel.908132'
                                 }
                                 }, {
                                 urlButton: {
-                                    displayText: 'Website Bot',
-                                    url: 'https://github.com/AzzBott679'
+                                    displayText: 'Facebook owner 2',
+                                    url: 'https://www.facebook.com/muhammadnaufal.mushaddiq'
                                 }
                                 }, {
                                 quickReplyButton: {
@@ -5005,15 +4980,15 @@ https://zenzapis.xyz`
                             }]
                          let setbot = db.data.settings[botNumber]
                         if (setbot.templateImage) {
-                        xavior.send5ButImg(m.chat, anu, 'AzzBot-MD', global.thumb, btn, global.thumb)
+                        xavior.send5ButImg(m.chat, anu, 'Rel°Bot-MD', global.thumb, btn, global.thumb)
                         } else if (setbot.templateGif) {
-                        xavior.send5ButGif(m.chat, anu, 'AzzBot-MD', global.visoka, btn, global.thumb)
+                        xavior.send5ButGif(m.chat, anu, 'Rel°Bot-MD', global.visoka, btn, global.thumb)
                         } else if (setbot.templateVid) {
-                        xavior.send5ButVid(m.chat, anu, 'AzzBot-MD', global.visoka, btn, global.thumb)
+                        xavior.send5ButVid(m.chat, anu, 'Rel°Bot-MD', global.visoka, btn, global.thumb)
                         } else if (setbot.templateMsg) {
-                        xavior.send5ButMsg(m.chat, anu, 'AzzBot-MD', btn)
+                        xavior.send5ButMsg(m.chat, anu, 'Rel°Bot-MD', btn)
                         } else if (setbot.templateLocation) {
-                        xavior.send5ButLoc(m.chat, anu, 'AzzBot-MD', global.thumb, btn)
+                        xavior.send5ButLoc(m.chat, anu, 'Rel°Bot-MD', global.thumb, btn)
                         }
                      }
             break
